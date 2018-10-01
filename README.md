@@ -4,7 +4,7 @@
 | :--------:| :------------:|
 | Séance 1 | Qu’est-ce qu’un texte ? |
 |Séance 2 |Introduction à XML|
-|Séance 3 | Spécification XML et DTD|
+|Séance 3 | Spécifications XML et DTD|
 |Séance 4|TEI|
 |Séance 5|Structurer un fichier TEI|
 |Séance 6|Les TEIguidelines|
