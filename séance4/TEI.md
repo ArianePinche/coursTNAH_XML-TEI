@@ -38,7 +38,7 @@ La communauté TEI est animée par le *TEI consortium*, fondation interdisciplin
 Il se compose des unités suivantes:
 
 * [TEI Board of Directors](http://www.tei-c.org/Board/);
-* [TEI Technical Council](http://www.tei-c.org/Activities/Council/index.xml);
+* [TEI Technical Council](http://www.tei-c.org/activities/council/);
 * [Membres institutionnels et individuels](http://members.tei-c.org/);
 * [TEI Workgroups](http://www.tei-c.org/Activities/Workgroups/), par ex. :
   * [TEI Manuscripts Special Interest Group](http://www.tei-c.org/Activities/SIG/Manuscript/);
@@ -50,7 +50,7 @@ Il se compose des unités suivantes:
 La communauté peut échanger et se rencontrer grâce à :
 
 * Une liste de diffusion : [TEI-L mailing list](https://listserv.brown.edu/?A0=TEI-L);
-* Une liste francophone :  [TEI-FR](https://groupes.renater.fr/sympa/info/tei-fr) et un wiki;
+* Une liste francophone :  [TEI-FR](https://groupes.renater.fr/sympa/info/tei-fr) et un [wiki](https://wiki.tei-c.org/index.php/Main_Page);
 * Des members meetings (congrès) annuels* Des congrès annuels : [TEI Conference](http://www.tei-c.org/Membership/Meetings/);
 * Une revue : [*Journal of the Text Encoding Initiative*](http://jtei.revues.org/);
 * Des **[Guidelines](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html)** ("recommandations") qui documentent notamment chaque élément.
