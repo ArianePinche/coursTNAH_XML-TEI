@@ -27,18 +27,19 @@ Les documents XML qui respectent, en plus de la syntaxe XML, les règles d’un 
 ----       
        
 ### Déclaration des attributs : 
-- `<!ATTlist nom_element nom_attribut	type_Données	type_Attribut>`
-	- Les données d’attributs :
+- `<!ATTlist nom_element nom_attribut	type_Données	usage_Attribut>`
+	- Les types de données d’attributs :
 		* `CDATA` n’importe quelle chaîne de caractère ;
 		* `ID` doit contenir une valeur unique dans le document XML. Un seul attribut de ce type par élément est accepté.
 		* `IDREF` fait référence à un attribut de type ID d’un élément du document. Les attributs Idref sont généralement utilisés pour établir des relations entre les éléments.
-	- Les types d’attributs: 
+	
+    - Les usages d’attributs: 
 		* `#IMPLIED` optionnel ;
        * `#REQUIRED` obligatoire ;
        * `#FIXED` à valeur fixe.
 ----
 ## Déclarer sa DTD dans son document XML
 
-- DTD interne : `<!DOCTYPE texte [<!ELEMENT nom_element (contenu)>`
+- DTD interne : `<!DOCTYPE texte [<!ELEMENT nom_element (contenu)>]>`
 - DTD externe (à déclarer avant l’élément racine) : 
 `<!DOCTYPE texte SYSTEM "nomDTD.dtd">`       
