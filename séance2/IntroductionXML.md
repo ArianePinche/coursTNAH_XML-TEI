@@ -102,3 +102,7 @@ Les instructions de traitement les plus courantes sont l'appel d'une feuille de 
 
 Tout ce qui est compris dans ces balises est traité comme des données textuelles brutes
 
+---
+
+Pour aller plus loin : https://www.youtube.com/watch?v=R0ncI_rr1z4&list=PL77mHK9JuenN9NXeXQbVcUORz7HZk-9Pv&index=2 
+
