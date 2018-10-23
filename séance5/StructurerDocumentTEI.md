@@ -23,7 +23,7 @@ Le **teiHeader** minimal comporte les trois sections suivantes :
    * `<publicationStmt>` : informations sur la façon dont il est distribué ou publié ;
    * `<sourceDesc>` : indications sur ses origines. 
 
-L’**élément <text>** contient les trois parties suivantes :
+L’**élément `<text>`** contient les trois parties suivantes :
 
    * `<front>` : pour les préfaces, et tous les éléments liminaires du texte ; 
    * `<body>` : pour le corps du texte proprement dit ;
