@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE poeme [
+<!ELEMENT poeme (titre?, auteur, strophe+, tercet)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT auteur (#PCDATA)>
+<!ELEMENT strophe (#PCDATA | tercet)*>
+<!ELEMENT tercet (#PCDATA)>
+
+<!ATTLIST poeme type CDATA #FIXED 'sonnet' >
+<!ATTLIST strophe type (quatrain | sizain) #REQUIRED>
+<!ATTLIST strophe n CDATA #IMPLIED >
+<!ATTLIST tercet n CDATA #REQUIRED >
+]>
+
+<poeme type="sonnet">
+    <titre>Mon rêve familier</titre>
+    <auteur>Paul Verlaine</auteur>
+    <strophe type="quatrain" n="1">
+        Je fais souvent ce rêve étrange et pénétrant 
+        D'une femme inconnue, et que j'aime, et qui m'aime 
+        Et qui n'est, chaque fois, ni tout à fait la même 
+        Ni tout à fait une autre, et m'aime et me comprend.
+    </strophe>
+    <strophe type="quatrain" n="2">
+        Car elle me comprend, et mon coeur, transparent 
+        Pour elle seule, hélas ! cesse d'être un problème 
+        Pour elle seule, et les moiteurs de mon front blême, 
+        Elle seule les sait rafraîchir, en pleurant.
+    </strophe>
+    <strophe type="sizain">
+        <tercet n="1">Est-elle brune, blonde ou rousse ? - Je l'ignore. 
+        Son nom ? Je me souviens qu'il est doux et sonore 
+        Comme ceux des aimés que la Vie exila.</tercet>        
+    </strophe>
+    <tercet n="2">Son regard est pareil au regard des statues, 
+        Et, pour sa voix, lointaine, et calme, et grave, elle a 
+        L'inflexion des voix chères qui se sont tues.</tercet>
+</poeme>
