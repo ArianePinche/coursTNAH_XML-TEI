@@ -12,9 +12,10 @@ Les recommandations visent à :
   * Fournir un format standard;  
   * Favoriser l’échange de textes dans les humanités;
   * Suggérer des principes abstraits pour l’encodage des textes;
-  * Proposer des ensembles de conventions d’encodage adaptés à plusieurs applications différentes;
   * Inclure un ensemble minimal de conventions pour l’encodage de nouveaux textes;
   * Proposer des ensembles de conventions d’encodage adaptés à plusieurs applications différentes.
+
+ 
 
 ---
 
