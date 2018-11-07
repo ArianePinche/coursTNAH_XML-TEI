@@ -33,7 +33,7 @@ S’inscrire sur le drive avant le 12 décembre, <https://docs.google.com/spread
 * Écrire l’ODD, la plus restrictive possible en fonction de votre encodage ;
 * Ajouter dans votre ODD la documentation sur votre projet d’encodage, les éléments que vous avez encodés : pourquoi et comment, et quels pourront être à terme les usages de votre édition.
 
-**Sujet n° 1** : Correspondances, volume I, lettres 1 à 6 : <https://gallica.bnf.fr/ark:/12148/bpt6k2065433/f3.double.r=George%20Sandcorrespondances%20correspondances>
+**Sujet n° 1** : Correspondances, volume I, lettres 1 à 6 : <https://gallica.bnf.fr/ark:/12148/bpt6k2065433/f4>
 
 **Sujet n° 2** : Correspondances, volume I, lettres 30 à 36 :
 <https://gallica.bnf.fr/ark:/12148/bpt6k2065433/f77.image> 
@@ -64,7 +64,7 @@ S’inscrire sur le drive avant le 12 décembre, <https://docs.google.com/spread
 * Ajouter dans votre ODD la documentation sur votre projet d’encodage, les éléments que vous avez encodés : pourquoi et comment.
 * Présenter les éventuelles réalisations que votre encodage pourrait permettre de réaliser.
 
-**Sujet n° 1** : Anonyme | Vie de saint Philippe | Folio 45ra – 45vb, <https://gallica.bnf.fr/ark:/12 148/btv1b84259980/f99.item.zoom>
+**Sujet n° 1** : Anonyme | Vie de saint Philippe | Folio 45ra – 45vb, <https://gallica.bnf.fr/ark:/12148/btv1b84259980/f99.item.zoom>
 
 **Sujet n° 2** : Anonyme | Vie de saint Jacques le Mineur | Folio 45vb – 46vb: <https://gallica.bnf.fr/ark:/12148/btv1b84259980/f100.item.zoom> 
 
@@ -90,7 +90,7 @@ S’inscrire sur le drive avant le 12 décembre, <https://docs.google.com/spread
 
 ### III— Édition critique 
 
-* Récupérer le XML du texte sur le github du projet Perseus : https://github.com/PerseusDL/canonical-latinLit/tree/master/data/phi0690/phi003 ;
+* Récupérer le XML du texte sur le github du projet Perseus : <https://github.com/PerseusDL/canonical-latinLit/tree/master/data/phi0690/phi003> ;
 * Structurer le texte en vers et en divisions qui correspondent à la structuration du texte en livres de l’œuvre, le body doit correspondre à l’épopée complète ;
 *  Encoder les noms de personnages, de lieux et faire un index de ces derniers dans le teiHeader ;
 * Signaler les dialogues quand il y en a ;
