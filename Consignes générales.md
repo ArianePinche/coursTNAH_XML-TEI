@@ -90,7 +90,7 @@ S’inscrire sur le drive avant le 12 décembre, <https://docs.google.com/spread
 
 ### III— Édition critique 
 
-* Récupérer le XML du texte sur le github du projet Perseus : <https://github.com/PerseusDL/canonical-latinLit/tree/master/data/phi0690/phi003> ;
+* Récupérer le XML du texte sur le github du projet Perseus : <http://github.com/PerseusDL/canonical-latinLit/tree/master/data/phi0690/phi003> ;
 * Structurer le texte en vers et en divisions qui correspondent à la structuration du texte en livres de l’œuvre, le body doit correspondre à l’épopée complète ;
 *  Encoder les noms de personnages, de lieux et faire un index de ces derniers dans le teiHeader ;
 * Signaler les dialogues quand il y en a ;
