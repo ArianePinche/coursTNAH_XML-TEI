@@ -46,7 +46,7 @@ S’inscrire sur le drive avant le 12 décembre, <https://docs.google.com/spread
 
 **Sujet n° 5** : Correspondances, volume V, Lettres 620-626 : <https://gallica.bnf.fr/ark:/12148/bpt6k206547m/f154.item> 
 
-**Sujet n° 6** : Correspondances, volume VI, Lettres 737-741 : <https://gallica.bnf.fr/ark:/12148/bpt6k2065480/f3.double.r=george%20Sand%20correspondances.shift>
+**Sujet n° 6** : Correspondances, volume VI, Lettres 737-741 : <https://gallica.bnf.fr/ark:/12148/bpt6k2065480/f3.item>
 
 **Sujet n° 7** : Lettres à Alfred de Musset et à Sainte-Beuve, lettres à Sainte-Beuve, 1 à 6 :
 <https://gallica.bnf.fr/ark:/12148/bpt6k9669345b/f1.item> 
