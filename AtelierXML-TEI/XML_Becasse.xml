@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Contes de la bécasse</title>
+            <author>Guy de Maupassant</author>
+            <respStmt>
+               <resp/>
+               <name/>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>ED. Rouveyre et G. Blond, imprimeurs-éditeurs</publisher>
+            <address>
+               <street>98, rue de Richelieu</street>
+               <settlement>Paris</settlement>
+            </address>
+            <date>1883</date>
+            <distributor facs="https://gallica.bnf.fr/ark:/12148/bpt6k10407406/f9.item.texteImage"
+               >BnF</distributor>
+            <availability>
+               <p>Domaine public</p>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note>Deuxième édition</note>
+         </notesStmt>
+         <sourceDesc>
+            <p>Texte issu du site Gallica</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <span type="pageDeGarde">
+            <span rend="middle smallCap" type="author">Guy de Maupassant</span>
+            <span rend="middle" type="title">Contes<lb/>de<lb/>La Bécasse<lb/></span>
+            <span facs="x" rend="middle">sceau R et B</span>
+            <span rend="middle" type="editor">
+               <span rend="smallCap">Paris<lb/> ED. Rouveyre et G. Blond<lb/> imprimeurs-éditeurs </span>
+               <address>
+                  <street>98, rue de Richelier</street>
+                  <lb rend="line"/>
+               </address>
+               <date>1883</date>
+            </span>
+         </span>
+         <span type="blankPage"/>
+         <span type="titlePage" rend="middle smallCap"> La Bécasse </span>
+         <span type="blankPage">
+            <span facs="x" rend="middle bottom">Sceau Bibliothèque nationale</span>
+            <span facs="x" rend="middle bottom">Sceau Don Sibilat - 219-992</span>
+         </span>
+         <div type="Introduction">
+            <p/>
+         </div>
+      </front>
+      <body>
+         <div type="conte">
+            <head>Ce cochon de Morin!</head>
+            <p></p>
+         </div>
+      </body>
+   </text>
+</TEI>
