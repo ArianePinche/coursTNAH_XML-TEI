@@ -122,9 +122,11 @@ NB : Dans une édition numérique, il est conseillé d'utiliser les caractères 
 * Palemonas MUFI
 * Junicode 
 
-Pour les caractères qui n'existent pas dans toutes les fontes, passer par l'entité hexadécimale XML.
+Pour les caractères qui n'existent pas dans toutes les fontes, passer par l'entité décimale. Elle est donnée dans la table des caractères d'un traitement de texte en ajoutant devant '&#' et ';' autour de votre entité. 
+ex : &#*votre_entitéDécimal*;
 
 Astuce : convertisseur pour les caractères <https://r12a.github.io/app-conversion>
+Prendre la valeur donnée dans la catégorie Decimal NCRs.
 
 ---
 
