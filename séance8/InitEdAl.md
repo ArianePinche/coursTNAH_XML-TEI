@@ -123,9 +123,10 @@ NB : Dans une édition numérique, il est conseillé d'utiliser les caractères 
 * Junicode 
 
 Pour les caractères qui n'existent pas dans toutes les fontes, passer par l'entité décimale. Elle est donnée dans la table des caractères d'un traitement de texte en ajoutant devant '&#' et ';' autour de votre entité. 
-ex : &#*votre_entitéDécimal*;
+ex : &#*votre_entitéDécimale*;
 
-Astuce : convertisseur pour les caractères <https://r12a.github.io/app-conversion>
+Astuce : convertisseur pour les caractères <https://r12a.github.io/app-conversion>.
+
 Prendre la valeur donnée dans la catégorie Decimal NCRs.
 
 ---
