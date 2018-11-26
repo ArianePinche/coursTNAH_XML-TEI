@@ -83,8 +83,8 @@ Pour aller plus loin : Chap 12.2 [*Linking the Apparatus to the Text*](http://w
 ---
 
 **Déclaration des sources dans le `<sourceDesc>` :**
-*  `<listWit>` : donne une liste de tous les témoins cités dans un apparat critique)
-*  `<witness>`(témoin d'une édition)
+*  `<listWit>` : donne une liste de tous les témoins cités dans un apparat critique;
+*  `<witness>` : témoin d'une édition.
 
 `<listWit>`
  `<witness xml:id="C1">Paris, BnF, ms 412</witness>`
