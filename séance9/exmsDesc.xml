@@ -43,6 +43,7 @@
                      <title><!-- titre de la section --></title>
                      <incipit><!-- premiers mots de la section --></incipit>
                      <explicit><!-- derniers mots de la section --></explicit>
+                     <textLang mainLang=""><!-- langue principale du texte concerné --></textLang>
                   </msItem>
                   <msItem>
                      <locus><!-- folios concernés par la section --></locus>
@@ -87,8 +88,8 @@
                         <stamp> <!--  description d'un cachet --></stamp>
                      </decoNote> 
                   </decoDesc>
-                  <bindingDesc><!-- description de la reliure --></bindingDesc>
-                  <sealDesc><!-- description du ou des sceaux --></sealDesc>
+                  <bindingDesc><p><!-- description de la reliure --></p></bindingDesc>
+                  <sealDesc><p><!-- description du ou des sceaux --></p></sealDesc>
                </physDesc>
                
                <!-- Histoire et transmission du manuscrit -->
@@ -96,7 +97,7 @@
                   <origin><!-- lieu de production du manuscrit --></origin>
                   <provenance>
                      <p><!-- histoire de la transmission du manuscrit --></p>
-                     <!-- indications bibliographique -->
+                     <!-- indications bibliographiques -->
                      <listBibl>
                         <bibl>
                            <author/>
