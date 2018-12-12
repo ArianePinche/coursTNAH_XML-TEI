@@ -30,11 +30,6 @@
                </attList>
             </classSpec>
             
-            <elementSpec ident="l" mode="change">
-               <attList>
-                  <attDef ident="n" mode="change" usage="req"/>
-               </attList>
-            </elementSpec>
            
             <!--Checking module msdescription-->
             <classRef key="model.physDescPart"/>
