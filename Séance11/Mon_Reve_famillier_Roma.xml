@@ -28,11 +28,21 @@
                 <moduleRef key="tei" except=""/>
                 <moduleRef key="header" except=""/>
                 <moduleRef key="textstructure" except=""/>
-                <classSpec type="atts" ident="att.global" mode="change">
+               <elementSpec ident="l" mode="change">
+                   <attList>
+                       <attDef ident="n" usage="req" mode="change"/>
+                       
+                   </attList>
+               </elementSpec>
+                <elementSpec ident="lg" mode="change">
                     <attList>
-                        <attDef ident="n" mode="change" usage="req"/>
+                        <attDef ident="type" usage="req" mode="change">
+                            <valList>
+                                <valItem ident="sizain"/>
+                            </valList>
+                        </attDef>
                     </attList>
-                </classSpec>
+                </elementSpec>
             </schemaSpec>
         </body>
     </text>
