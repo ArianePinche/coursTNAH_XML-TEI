@@ -1,7 +1,7 @@
 # Qu’est-ce qu’un texte ?
 
 ## Matérialité du texte
-- 	Le texte brut (.txt) / *plain text* se compose de caractères pour lesquels ils existent plusieurs répertoires :
+- 	Le texte brut (.txt) / *plain text* se compose de caractères pour lesquels il existe plusieurs répertoires :
 		- ASCII American Standard Code for Information Interchange)
 		- ISO 8859-1 (Latin 1)
 		- UTF-8 (Universal Character Set Transformation Format - 8 bits)
