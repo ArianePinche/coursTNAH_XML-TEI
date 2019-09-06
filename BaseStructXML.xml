@@ -21,7 +21,7 @@
             </sourceDesc>
         </fileDesc>
     </teiHeader>
-    <!-- Encodage des données textuelles ou analyser -->
+    <!-- Encodage des données textuelles ou à analyser -->
     <text>
         <front/>
         <!-- Données qui relèvent de la préface, de l'introduction -->

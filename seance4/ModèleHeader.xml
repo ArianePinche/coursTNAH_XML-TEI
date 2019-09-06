@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title/>
+            <author/>
+         </titleStmt>
+         <publicationStmt>
+            <publisher/>
+            <date/>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc xml:id="A">
+               <msIdentifier>
+                  <country>France</country>
+                  <settlement>Paris</settlement>
+                  <!--instituation chargée de la conservation du manuscrit-->
+                  <repository>Bibliothèque Nationale de France</repository>
+                  <!-- lieu de conservation -->
+                  <idno>Lat 7920</idno>
+                  <!-- côte du manuscrit -->
+                  <altIdentifier>
+                     <!-- ancienne côte du manuscrit -->
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <head>
+                  <title/>
+                  <!-- nom présent dans la notice -->
+                  <origDate notAfter="1100" notBefore="1000"/>
+               </head>
+               <msContents>
+                  <msItemStruct>
+                     <locus/>
+                     <!-- feuillets occupés par le texte -->
+                     <author/>
+                     <title/>
+                     <incipit/>
+                     <explicit/>
+                  </msItemStruct>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <!-- description du codex -->
+                     <supportDesc>
+                        <!-- description des matériaux et marque -->
+                        <support>
+                           <watermark><!-- si présence de filigranes --></watermark>
+                        </support>
+                        <extent>
+                           <!-- dimension -->
+                           <width unit="mm"/>
+                           <height unit="mm"/>
+                        </extent>
+                        <foliation/>
+                        <!-- système d'enchainement des folios dans le manuscrit -->
+                        <condition/>
+                        <!-- état du manuscrit -->
+                     </supportDesc>
+                     <layoutDesc>
+                        <!-- description de la mise en page -->
+                        <layout columns="1" writtenLines="1"/>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="A1"/>
+                     <!-- description des différentes mains avec attribution d'un xml:id à chacune des mains-->
+                  </handDesc>
+                  <scriptDesc>
+                     <!-- description de l'écriture -->
+                     <scriptNote/>
+                     <scriptNote/>
+                  </scriptDesc>
+                  <decoDesc>
+                     <!--  description des enluminures -->
+                     <decoNote/>
+                     <decoNote/>
+                  </decoDesc>
+               </physDesc>
+               <history>
+                  <!-- histoire du manuscrit -->
+                  <origin/>
+                  <!-- lieu de copie -->
+                  <provenance>
+                     <!-- anciens lieux de conservation -->
+                     <p/>
+                     <list>
+                        <item><!--provenance du segment 1 dans le cas de miscellanées--></item>
+                        <item><!--provenance du segment 2 dans le cas de miscellanées--></item>
+                     </list>
+                     <listBibl>
+                        <bibl>
+                           <author/>
+                           <title/>
+                           <pubPlace/>
+                           <publisher/>
+                           <date/>
+                        </bibl>
+                     </listBibl>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <variantEncoding method="double-end-point" location="internal"/>
+         <projectDesc>
+            <p><!-- décrire la méthodologie du projet et ses objectifs si nécessaire--></p>
+         </projectDesc>
+      </encodingDesc>
+   </teiHeader>
+   <text>
+      <body><p></p></body>
+   </text>
+</TEI>

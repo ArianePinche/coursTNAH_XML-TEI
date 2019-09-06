@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-
 <TEI 
  xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Mon rêve familier</title>
+            <title>Nom recueil</title>
             <author>Paul Verlaine</author>
          </titleStmt>
          <publicationStmt>
@@ -19,6 +18,7 @@
    <text>
       <body>
          <lg type="sonnet">
+            <head>Nom poeme</head>
             <lg type="quatrain" n="1">
                <l>Je fais souvent ce rêve étrange et pénétrant</l>
                <l>D'une femme inconnue, et que j'aime, et qui m'aime</l>
