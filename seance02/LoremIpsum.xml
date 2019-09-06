@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE texte [
+<!ELEMENT texte (chapitre+)>
+<!ELEMENT chapitre (titre?, paragraphe+)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT paragraphe (#PCDATA)>
+<!ATTLIST chapitre n CDATA #REQUIRED >]>
+
+<texte>
+    <chapitre n="1"> 
+        <titre>Lorem Ipsum</titre>
+        <paragraphe>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor,
+            metus vitae lacinia bibendum, nibh mauris iaculis dui, et pharetra diam lacus eu lectus.
+            Donec sodales commodo neque, ut tincidunt tellus tincidunt a. Nam ac placerat ipsum.
+            Integer urna erat, eleifend vitae ipsum sit amet, convallis condimentum neque. Nunc id
+            fringilla sapien. Curabitur non euismod sem, at tempor magna. Sed ut consectetur lacus.
+            Ut vulputate dolor interdum lectus mattis laoreet. Nunc vel finibus massa, in varius
+            dolor. Curabitur tincidunt leo eu eleifend euismod. Nunc ex diam, tristique eu fermentum
+            quis, efficitur non massa. Nunc non aliquet nisi. Proin aliquam magna ut metus iaculis,
+            non sodales velit tempus. Mauris ultrices, eros eget ultrices mattis, eros odio tempor
+            orci, ut facilisis nulla nibh in est. Suspendisse efficitur velit sit amet suscipit
+            lacinia.</paragraphe>
+        <paragraphe>Mauris ullamcorper pretium leo, fermentum efficitur erat malesuada ac. Sed
+            sagittis vitae odio nec pharetra. Integer ut neque consectetur, commodo ipsum sed,
+            consequat ante. Aliquam eu tellus non ligula euismod dapibus a ut mauris. Integer a elit
+            rhoncus, varius est eu, imperdiet eros. Ut porta laoreet diam sit amet tincidunt.
+            Curabitur et vulputate augue. Integer porttitor ligula ut dolor congue, ut volutpat
+            tortor mollis. Vestibulum vitae mauris molestie lacus dapibus imperdiet. Nunc id congue
+            lacus. Nunc finibus imperdiet mi, porttitor accumsan ex aliquet quis. Fusce a urna in
+            erat venenatis dapibus. Phasellus finibus lectus et lectus condimentum, ac sagittis
+            mauris rhoncus.</paragraphe>
+        <paragraphe> Donec et accumsan ex, sed tempor elit. Nulla placerat justo in rhoncus laoreet.
+            Donec fermentum, odio ac vulputate aliquam, tortor velit ullamcorper velit, eu lacinia
+            risus purus id velit. Nunc quis tortor sed elit interdum auctor. Donec sagittis justo ut
+            ipsum facilisis ultrices. Quisque lorem magna, scelerisque nec rhoncus sed, sollicitudin
+            ut purus. Quisque pellentesque libero sit amet nulla sollicitudin rhoncus. Sed ac
+            viverra sem, id dignissim tortor. Phasellus elementum dictum iaculis. Nunc bibendum
+            magna tortor, ut venenatis eros scelerisque in.</paragraphe>
+    </chapitre>
+</texte>
