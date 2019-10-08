@@ -63,7 +63,14 @@ Depuis 1998, XML est un langage libre et documenté. XML est également un **lan
 - l’échange de données;
 - la migration vers d’autres plates-formes, d’autres logiciels, d’autres formats.
 
-----
+---
+## Un peu d'Histoire...
+
+- SGML (1970), Standard Generalized Markup Language;
+	- HTML, HyperText Markup Language: affiche des données notamment sur le Web;
+	- XML, eXtensible Markup Language: contient et structure des données textuelles.
+
+---
 
 ## Structure générale du XML
 
@@ -71,11 +78,12 @@ Les données sont incluses dans le document XML sous forme de chaînes de caract
 
 *Exemple* : `<nomElement>chaineCaracteres</nomElement>`
 
-----
+---
 
 Les éléments XML suivent un principe d’arborescence par imbrication.
 
 *Exemple* :
+
 ```XML
 <elementParent>
   <elementEnfant>chaineCaracteres</elementEnfant>
@@ -84,13 +92,6 @@ Les éléments XML suivent un principe d’arborescence par imbrication.
 
 Ainsi les éléments *enfants* héritent des propriétés des éléments *parents*
 
----
-
-## Un peu d'Histoire...
-
-- SGML (1970), Standard Generalized Markup Language;
-	- HTML, HyperText Markup Language: affiche des données notamment sur le Web;
-	- XML, eXtensible Markup Language: contient et structure des données textuelles.
 ---
 
 # Les éléments XML
