@@ -4,11 +4,11 @@
          <face type="verso" facs="">
             <zone type="en-tête">
                <zone type="legende" rend="centre haut"></zone>
-               <zone type="timbre" rend="x">Vendee</zone>
-               <zone type="tamponPoste" rend="x">côte de lumière</zone>
+               <zone type="timbre" rend="x"></zone>
+               <zone type="tamponPoste" rend="x"></zone>
             </zone>
             <zone type="message">
-               <paragraphe>Bientôt [...] repos</paragraphe>
+               <paragraphe></paragraphe>
                <salutation>
                   <formulePolitesse></formulePolitesse>
                   <signature></signature>
