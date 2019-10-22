@@ -1,4 +1,4 @@
-# Séance 3 : Spécifications XML 
+# Séance 2 : Spécifications XML 
 
 Les spécifications XML définissent un modèle pour les documents XML qui réglemente l’imbrication des balises, les noms d’éléments autorisés, la façon dont les attributs sont rattachés aux éléments.
 
@@ -19,12 +19,14 @@ Les documents XML qui respectent, en plus de la syntaxe XML, les règles d’un 
 
 ### Déclaration d’un sous-élément : 
 `<!ELEMENT nom_element (nom_sousElement)>`
-- Déclaration d’une séquence de sous-éléments : `<!ELEMENT nom_element (nom_sousElement1, nom_sousElement2)>` *Attention : l’ordre de déclaration des sous-éléments est signifiant.*
+- Déclaration d’une séquence de sous-éléments : `<!ELEMENT nom_element (nom_sousElement1, nom_sousElement2)>` 
+*Attention : l’ordre de déclaration des sous-éléments est signifiant.*
 	- Nombre d’éléments autorisés :
 		* `?` zéro ou un ;
        * `*` zéro ou plusieurs éléments ;
        * `+` un ou plusieurs éléments.
 - Exemple : `<!ELEMENT texte (chapitre+)>`
+NB : si vous voulez déclarer des sous-éléments et du  texte dans un élément, il faut déclarer #PCDATA avant les autres éléments.
 ----       
        
 ### Déclaration des attributs : 
@@ -40,9 +42,10 @@ Les documents XML qui respectent, en plus de la syntaxe XML, les règles d’un 
        * `#FIXED` à valeur fixe.
 
 - Exemple : `<!ATTLIST chapitre n CDATA #REQUIRED >`
+
 ----
 ## Déclarer sa DTD dans son document XML
 
-- DTD interne : `<!DOCTYPE texte [<!ELEMENT nom_element (contenu)>]>`
+- DTD interne : `<!DOCTYPE ElementRacine [<!ELEMENT nom_element (contenu)>]>`
 - DTD externe (à déclarer avant l’élément racine) : 
-`<!DOCTYPE texte SYSTEM "nomDTD.dtd">`       
+`<!DOCTYPE ElementRacine SYSTEM "nomDTD.dtd">`       
