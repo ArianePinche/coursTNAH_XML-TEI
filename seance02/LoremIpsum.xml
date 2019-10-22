@@ -1,15 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE texte [
 <!ELEMENT texte (chapitre+)>
-<!ELEMENT chapitre (titre?, paragraphe+)>
-<!ELEMENT titre (#PCDATA)>
-<!ELEMENT paragraphe (#PCDATA)>
-<!ATTLIST chapitre n CDATA #REQUIRED >]>
+<!ELEMENT chapitre (titre?,paragraphe+)>
+<!ELEMENT titre EMPTY>
+<!ELEMENT paragraphe (#PCDATA | lb)*>
+<!ELEMENT lb EMPTY>
+
+<!ATTLIST chapitre n CDATA #REQUIRED >
+]>
 
 <texte>
     <chapitre n="1"> 
-        <titre>Lorem Ipsum</titre>
-        <paragraphe>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor,
+        <titre></titre>
+        
+        <paragraphe>Lorem ipsum dolor sit amet, <lb/>consectetur adipiscing elit. Maecenas porttitor,
             metus vitae lacinia bibendum, nibh mauris iaculis dui, et pharetra diam lacus eu lectus.
             Donec sodales commodo neque, ut tincidunt tellus tincidunt a. Nam ac placerat ipsum.
             Integer urna erat, eleifend vitae ipsum sit amet, convallis condimentum neque. Nunc id
