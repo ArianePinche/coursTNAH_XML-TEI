@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE piece SYSTEM "LE%20MISANTHROPE.dtd">
+<piece xml:lang="fr">
+  <titre>LE MISANTHROPE.</titre>
+  <acte>
+    <titre>ACTE PREMIER</titre>
+    <scene>
+      <titre>SCÈNE 1.</titre>
+      <casting>PHILINTE, ALCESTE</casting>
+      <tourDeParole>
+        <enonciateur>PHILINTE.</enonciateur>
+        <vers n="1" part="I">Qu'est-ce donc? qu'avez-vous ?</vers>
+      </tourDeParole>
+      <tourDeParole>
+        <enonciateur>ALCESTE</enonciateur>
+        <didascalie>, assis</didascalie>
+        <vers n="1" part="F">Laissez-moi, je vous prie.</vers>
+      </tourDeParole>
+      <tourDeParole>
+        <enonciateur>PHILINTE.</enonciateur>
+        <vers>Mais encor, dites-moi, quelle bizarrerie....</vers>
+      </tourDeParole>
+      <tourDeParole>
+        <enonciateur>ALCESTE.</enonciateur>
+        <vers>Laissez-moi là, vous dis-je, et courez vous cacher.</vers>
+      </tourDeParole>
+      <tourDeParole>
+        <enonciateur>PHILINTE.</enonciateur>
+        <vers>Mais on entend les gens au moins sans se fâcher.</vers>
+      </tourDeParole>
+      <tourDeParole>
+        <enonciateur>ALCESTE.</enonciateur>
+        <vers>Moi, je veux me fâcher, et ne veux point entendre.</vers>
+      </tourDeParole>
+      <tourDeParole>
+        <enonciateur>PHILINTE</enonciateur>
+        <vers>Dans vos brusques chagrins je ne puis vous comprendre,</vers>
+      </tourDeParole>
+      <vers>Et quoique amis enfin, je suis tout des premiers....</vers>
+      <tourDeParole>
+        <enonciateur>ALCESTE</enonciateur>
+        <didascalie>, se levant brusquement</didascalie>
+        <vers>Moi, votre ami? Rayez cela de vos papiers.</vers>
+        <vers>J'ai fait jusques ici profession de l'être,</vers>
+        <vers>Mais, après ce qu'en vous je viens de voir paraître,</vers>
+      </tourDeParole>
+    </scene>
+  </acte>
+</piece>
