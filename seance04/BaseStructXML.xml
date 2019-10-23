@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>  <!-- Instruction de traitement XML, Version XML, Version d'encodage -->
+
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!-- schéma qui restreint les possibilités d'emplois de balises, moyen de contrôler l'encodage de caractères. -->
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <!-- @xmlns = espace de nom, on déclare qu'on propose un document conforme aux standards de la TEI -->
+    <teiHeader>
+        <!-- Métadonnées -->
+        <fileDesc>
+            <titleStmt>
+                <title>Title</title>
+                <author>Auteur</author>
+            </titleStmt>
+            <publicationStmt>
+                <p>Maison d'édition, lieu, année</p>
+            </publicationStmt>
+            <sourceDesc>
+                <!-- Description de la source. Un simple paragraphe peut suffir-->
+                <p/>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <!-- Encodage des données textuelles -->
+    <text>
+        <front/>
+        <!-- Données qui relèvent de la préface, de l'introduction -->
+        <body xml:lang="fr">
+            <div type="book">
+                <!-- Mise en place de la structuration du texte, l'imbrication peut se multiplier autant que nécessaire -->
+                <div type="chapter" n="1">
+                    <!-- div = système de base de structuration hiérarchique, à personnaliser avec @type -->
+                    <head/>
+                    <!-- head = titre -->
+                    <p/>
+                    <!-- p = paragraphe -->
+                    <p/>
+                    <p/>
+                </div>
+                <div>
+                    <head/>
+                    <p/>
+                    <p/>
+                    <p/>
+                </div>
+            </div>
+        </body>
+        <back/>
+        <!-- Données qui relèvent de la postface, de l'épilogue -->
+    </text>
+</TEI>
