@@ -69,7 +69,6 @@ Corpus test : La séquence de sainte Eulalie
 * `<p>` contient un paragraphe;
 * `<l>` contient un seul vers;
 * `<lg>` contient un groupe de vers fonctionnant comme une unité formelle, par exemple une strophe, un refrain, un paragraphe en vers;
-* `<l>` contient un seul vers;
 * `<pc>`permet de signaler la ponctuation
 
 ---
