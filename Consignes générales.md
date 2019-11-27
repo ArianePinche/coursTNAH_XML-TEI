@@ -60,7 +60,7 @@ https://gallica.bnf.fr/ark:/12148/bpt6k6323006w/f383.image
 
 * Structurer le texte fourni en divisions de type section en fonction des initiales ornées, et en paragraphes si des subdivisions vous semblent nécessaires pour le sens ;
 * Renseigner le teiHeader, et plus précisément le msDesc à l’aide de la notice Gallica du manuscrit 411 et de la notice Jonas : http://jonas.irht.cnrs.fr/consulter/manuscrit/detail_manuscrit.php?projet=71287#Association ;
-* Aider-vous de l'HTR fourni pour faire votre transcription (corriger les erreurs);
+* Aidez-vous de l'HTR fourni pour faire votre transcription (corriger les erreurs);
 * Encoder les abréviations et les normalisations graphiques de manière à conserver la graphie originale et à proposer une graphie régularisée (penser à utiliser une fonte adaptée à votre travail, ainsi qu’à proposer des entités décimales pour les caractères spéciaux);
 * Faire un index des noms de personnages et de lieux ;
 * Écrire l’ODD la plus restrictive possible en fonction de votre encodage ;
@@ -104,7 +104,7 @@ https://gallica.bnf.fr/ark:/12148/btv1b107209247/f179.item.zoom
 
 ### III— Édition critique : Phèdre de Sénèque
 
-* À l'aide du xml fourni, structurer le texte en répliques qui correspondent à la structuration du texte;
+* À l'aide du XML fourni, structurer le texte en répliques qui correspondent à la structuration du texte;
 * Encoder les noms de personnages, de lieux et faire un index de ces derniers dans le teiHeader ;
 *  À l’aide des documents fournis, proposer une édition critique basée sur la conversion de l’édition des belles lettres de F. R. Chaumartin de 1996 (quand le texte fourni diffère, proposer en variante ce dernier en déclarant #perseus comme témoin) ;
  * Compléter le teiHeader ;
@@ -112,7 +112,7 @@ https://gallica.bnf.fr/ark:/12148/btv1b107209247/f179.item.zoom
  * Constituer un apparat critique en suivant la méthode de la parallel-segmentation ;
 *  Écrire l’ODD, la plus restrictive possible en fonction de votre encodage ;
 * Ajouter dans votre ODD la documentation sur votre projet d’encodage, les éléments que vous avez encodés : pourquoi et comment.
-* Présenter les avantages d’une édition critique nativement numérique, par rapport à une « édition papier traditionnelle ».
+* Présenter les avantages d’une édition critique nativement numérique par rapport à une « édition papier traditionnelle ».
 
 **Sujet n° 1** : v.219-329. « Amoris in me maximum regnum puto »à « tenuem Tyrio stamine pallam. »;
 
