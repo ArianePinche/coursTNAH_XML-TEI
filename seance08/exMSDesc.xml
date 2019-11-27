@@ -11,8 +11,7 @@
          <publicationStmt>
             <p>Publication Information</p>
          </publicationStmt>
-         <sourceDesc>
-            
+         <sourceDesc>   
         <msDesc xml:id="A">
            <!-- identifier le manuscrit -->
            <msIdentifier>
@@ -31,7 +30,6 @@
               <origDate><!-- datation --></origDate>
               <note><!-- informations complémentaires --></note>
            </head>
-           
            <!-- structure du manuscrit -->
            <msContents>
               <msItemStruct>
@@ -40,10 +38,9 @@
                  <title><!-- titre de la section --></title>
                  <incipit><!-- premiers mots de la section --></incipit>
                  <explicit><!-- derniers mots de la section --></explicit>
-                 <textLang mainLang="" otherLangs=""><!-- langue principale du texte concerné --></textLang>
+                 <textLang mainLang="" otherLangs=""></textLang>
               </msItemStruct>
            </msContents>
-           
            <!-- Description matérielle du manuscrit -->
            <physDesc>
               <objectDesc>
