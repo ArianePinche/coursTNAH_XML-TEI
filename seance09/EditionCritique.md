@@ -56,15 +56,15 @@ Pour aller plus loin : BOURGAIN, Pascale et VIELLIARD, Françoise, *Conseils pou
 
 ---
 
-* Définir quelle présentation on souhaite :
-
-	* **Apparat positif**, qui enregistre et fait figurer explicitement les leçons de chaque témoin accompagnée de son sigle ; le plus lourd, mais le plus clair ;
-	* **Apparat négatif**, qui ne fait figurer que les témoins dont le texte diffère. Tous les autres, qui ne sont pas signalés, sont supposés porter le texte retenu ;
-	* **Apparat mixte**, négatif par défaut qui ne devient positif qu’en cas de besoin de clarification.
+Voir l'exemple d'apparat de la *Pharsale* de Lucain (ExempleApparat.pdf)
 
 ---
 
-Voir l'exemple d'apparat de la *Pharsale* de Lucain (ExempleApparat.pdf)
+* Définir quelle présentation on souhaite :
+
+	* **Apparat positif**, qui enregistre et fait figurer explicitement les leçons de chaque témoin accompagnées de son sigle ; le plus lourd, mais le plus clair ;
+	* **Apparat négatif**, qui ne fait figurer que les témoins dont le texte diffère. Tous les autres, qui ne sont pas signalés, sont supposés porter le texte retenu ;
+	* **Apparat mixte**, négatif par défaut qui ne devient positif qu’en cas de besoin de clarification.
 
 ---
 
