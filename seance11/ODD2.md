@@ -70,9 +70,31 @@ Modification d'un élément avec @mode="change"
 ```
 
 - Modifier dans l'ODD du texte de Verlaine l'élément `<l>`en lui ajoutant un attribut "n" obligatoire.
+---
+### Typer des données 
 
-----
+Utilisation dans l'élément de définition d'une balise ou d'un attribut `<dataType>` et de son enfant `<dataRef>`avec l'attribut @key si on pointe vers un type de données défini par la TEI et un attribut @name si on pointe vers un type de données défini dans XML schéma ou RelaxNG :
+
+```XML
+ <attDef ident="n" mode="change">
+    <datatype>
+       <dataRef key="teidata.count"/>
+    </datatype>
+ </attDef>
+```
+teidata.count = 
+
+```XML
+<content>
+ <dataRef name="nonNegativeInteger"/>
+</content>
+```
+Liste des types de données TEI :<https://www.tei-c.org/release/doc/tei-p5-doc/fr/html/REF-MACROS.html>
+
+---
 ### Addition d'un élément 
+
+
 
 - Déclaration d'un élément dans le `<moduleRef>` avec @include
 	- `<moduleRef key="textstructure" include="TEI text body front"/>`
@@ -103,6 +125,7 @@ Modification d'un élément avec @mode="change"
  - Modifier les valeurs de l'attribut type des `<rdg>` en faisant une liste fermée comprenant les valeurs :
 	- graphic
 	- semantic
+- Limiter n'autoriser que les nombres entiers dans les valeurs de l'attribut @n de l'élément l
 
 ---
 ## Documenter son ODD
@@ -178,6 +201,8 @@ Le corpus présente trois cas de figure. Dans le premier cas, la ponctuation ori
 
 ----
 ## Exercice 
+
 -  Créer la documentation de l’ODD de Lucain.
 	- Insérer dans votre documentation au moins un exemple
 	- Modifier la documentation d’un élément en réécrivant sa description pour la faire correspondre au projet.
+- Générer vos guidelines en HTML
