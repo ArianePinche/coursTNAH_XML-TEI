@@ -9,12 +9,12 @@
 
 * Compléter de la manière la plus précise possible le teiHeader de votre édition, en fonction des éléments nécessaires à son établissement et à la compréhension du texte (/3);
 
-* Écrire une ODD adaptée à votre encodage et documentée. Pour vérifier les acquis,
-	- Générer une ODD à partir de Roma ou de oddbyexample (/2)
+* Écrire un schéma ODD adapté à votre encodage et documenté. 	- Générer une ODD à partir de Roma ou de oddbyexample et associer le schéma rng correspondant à votre projet XML (/3)
 	- Votre ODD doit contenir au moins :
-		- Une règle contraignant l’usage d’un attribut et sa ou ses valeurs (/1);
-		- Une règle contraignant l’enchaînement de certains éléments (/1);
-		- Une règle contraignant la valeur d’un attribut ou l’usage d’un élément ou d’un attribut en fonction de son environnement (/1).
+		- Une règle contraignant l’usage d’un attribut et sa ou ses valeurs (/2);
+		- Une règle contraignant l’enchaînement de certains éléments (opt. +1);
+		- Une règle contraignant la valeur d’un attribut ou l’usage d’un élément ou d’un attribut en fonction de son environnement (opt. +1).
+		
 	- À partir de votre ODD, générer la documentation HTML de votre projet.
 		- Présenter en introduction votre projet et ses exploitations possibles (/4);
 		- Documenter le fonctionnement de votre encodage et vos choix de balises (/2). 
