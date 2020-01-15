@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2020-01-15T14:22:47Z. .
+Schema generated from ODD source 2019-12-17T14:59:26Z. .
 TEI Edition: Version 3.3.0. Last updated on
 	31st January 2018, revision f4d8439
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
@@ -21,6 +21,15 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
             <ref name="model.global"/>
             <ref name="lg"/>
             <ref name="model.lLike"/>
+         </choice>
+      </zeroOrMore>
+   </define>
+   <define name="macro.limitedContent">
+      <zeroOrMore>
+         <choice>
+            <text/>
+            <ref name="model.limitedPhrase"/>
+            <ref name="model.inter"/>
          </choice>
       </zeroOrMore>
    </define>
@@ -58,6 +67,80 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
          </attribute>
       </optional>
    </define>
+   <define name="att.ranging.attributes">
+      <ref name="att.ranging.attribute.atLeast"/>
+      <ref name="att.ranging.attribute.atMost"/>
+      <ref name="att.ranging.attribute.min"/>
+      <ref name="att.ranging.attribute.max"/>
+      <ref name="att.ranging.attribute.confidence"/>
+   </define>
+   <define name="att.ranging.attribute.atLeast">
+      <optional>
+         <attribute name="atLeast">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives a minimum estimated value for the approximate measurement.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.ranging.attribute.atMost">
+      <optional>
+         <attribute name="atMost">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives a maximum estimated value for the approximate measurement.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.ranging.attribute.min">
+      <optional>
+         <attribute name="min">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">where the measurement summarizes more than one observation or a range, supplies the minimum value observed.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.ranging.attribute.max">
+      <optional>
+         <attribute name="max">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">where the measurement summarizes more than one observation or a range, supplies the maximum value observed.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.ranging.attribute.confidence">
+      <optional>
+         <attribute name="confidence">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the degree of statistical confidence (between zero and one) that a value falls within the range specified by min and max, or the proportion of observed values that fall within that range.</a:documentation>
+            <data type="double"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.dimensions.attributes">
+      <ref name="att.ranging.attributes"/>
+   </define>
    <define name="att.written.attributes">
       <ref name="att.written.attribute.hand"/>
    </define>
@@ -73,8 +156,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
       <ref name="att.datable.w3c.attribute.when"/>
       <ref name="att.datable.w3c.attribute.notBefore"/>
       <ref name="att.datable.w3c.attribute.notAfter"/>
-      <ref name="att.datable.w3c.attribute.from"/>
-      <ref name="att.datable.w3c.attribute.to"/>
    </define>
    <define name="att.datable.w3c.attribute.when">
       <optional>
@@ -114,40 +195,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
       <optional>
          <attribute name="notAfter">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the latest possible date for the event in standard form, e.g. yyyy-mm-dd.</a:documentation>
-            <choice>
-               <data type="date"/>
-               <data type="gYear"/>
-               <data type="gMonth"/>
-               <data type="gDay"/>
-               <data type="gYearMonth"/>
-               <data type="gMonthDay"/>
-               <data type="time"/>
-               <data type="dateTime"/>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
-   <define name="att.datable.w3c.attribute.from">
-      <optional>
-         <attribute name="from">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the starting point of the period in standard form, e.g. yyyy-mm-dd.</a:documentation>
-            <choice>
-               <data type="date"/>
-               <data type="gYear"/>
-               <data type="gMonth"/>
-               <data type="gDay"/>
-               <data type="gYearMonth"/>
-               <data type="gMonthDay"/>
-               <data type="time"/>
-               <data type="dateTime"/>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
-   <define name="att.datable.w3c.attribute.to">
-      <optional>
-         <attribute name="to">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the ending point of the period in standard form, e.g. yyyy-mm-dd.</a:documentation>
             <choice>
                <data type="date"/>
                <data type="gYear"/>
@@ -227,10 +274,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
          </attribute>
       </optional>
    </define>
-   <define name="att.global.responsibility.attributes">
-      <ref name="att.global.responsibility.attribute.cert"/>
-      <ref name="att.global.responsibility.attribute.resp"/>
-   </define>
    <define name="att.global.responsibility.attribute.cert">
       <optional>
          <attribute name="cert">
@@ -251,22 +294,26 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
          </attribute>
       </optional>
    </define>
-   <define name="att.global.responsibility.attribute.resp">
+   <define name="att.editLike.attributes">
+      <ref name="att.editLike.attribute.instant"/>
+   </define>
+   <define name="att.editLike.attribute.instant">
       <optional>
-         <attribute name="resp">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsible party) indicates the agency responsible for the intervention or interpretation, for example an editor or transcriber.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI"/>
-               </oneOrMore>
-            </list>
+         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    name="instant"
+                    a:defaultValue="false">
+            <a:documentation>indicates whether this is an instant revision or not.</a:documentation>
+            <choice>
+               <data type="boolean"/>
+               <choice>
+                  <value>unknown</value>
+                  <a:documentation/>
+                  <value>inapplicable</value>
+                  <a:documentation/>
+               </choice>
+            </choice>
          </attribute>
       </optional>
-   </define>
-   <define name="att.global.rendition.attributes">
-      <ref name="att.global.rendition.attribute.rend"/>
-      <ref name="att.global.rendition.attribute.style"/>
-      <ref name="att.global.rendition.attribute.rendition"/>
    </define>
    <define name="att.global.rendition.attribute.rend">
       <optional>
@@ -302,9 +349,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
          </attribute>
       </optional>
    </define>
-   <define name="att.global.source.attributes">
-      <ref name="att.global.source.attribute.source"/>
-   </define>
    <define name="att.global.source.attribute.source">
       <optional>
          <attribute name="source">
@@ -316,16 +360,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
             </list>
          </attribute>
       </optional>
-   </define>
-   <define name="att.global.attributes">
-      <ref name="att.global.rendition.attributes"/>
-      <ref name="att.global.responsibility.attributes"/>
-      <ref name="att.global.source.attributes"/>
-      <ref name="att.global.attribute.xmlid"/>
-      <ref name="att.global.attribute.n"/>
-      <ref name="att.global.attribute.xmllang"/>
-      <ref name="att.global.attribute.xmlbase"/>
-      <ref name="att.global.attribute.xmlspace"/>
    </define>
    <define name="att.global.attribute.xmlid">
       <optional>
@@ -390,6 +424,19 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
         <sch:assert test="@type">The <sch:name/> element should not be categorized in detail with @subtype unless also categorized in general with @type</sch:assert>
       </sch:rule>
    </pattern>
+   <define name="att.sortable.attributes">
+      <ref name="att.sortable.attribute.sortKey"/>
+   </define>
+   <define name="att.sortable.attribute.sortKey">
+      <optional>
+         <attribute name="sortKey">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the sort key for this element in an index, list or group which contains it.</a:documentation>
+            <data type="token">
+               <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
    <define name="model.nameLike.agent">
       <notAllowed/>
    </define>
@@ -464,22 +511,32 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
       </choice>
    </define>
    <define name="model.dateLike">
-      <notAllowed/>
+      <choice>
+         <ref name="date"/>
+      </choice>
    </define>
    <define name="model.dateLike_alternation">
-      <notAllowed/>
+      <choice>
+         <ref name="date"/>
+      </choice>
    </define>
    <define name="model.dateLike_sequence">
-      <empty/>
+      <ref name="date"/>
    </define>
    <define name="model.dateLike_sequenceOptional">
-      <empty/>
+      <optional>
+         <ref name="date"/>
+      </optional>
    </define>
    <define name="model.dateLike_sequenceOptionalRepeatable">
-      <empty/>
+      <zeroOrMore>
+         <ref name="date"/>
+      </zeroOrMore>
    </define>
    <define name="model.dateLike_sequenceRepeatable">
-      <notAllowed/>
+      <oneOrMore>
+         <ref name="date"/>
+      </oneOrMore>
    </define>
    <define name="model.measureLike">
       <notAllowed/>
@@ -677,22 +734,32 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
       <notAllowed/>
    </define>
    <define name="model.listLike">
-      <notAllowed/>
+      <choice>
+         <ref name="listWit"/>
+      </choice>
    </define>
    <define name="model.listLike_alternation">
-      <notAllowed/>
+      <choice>
+         <ref name="listWit"/>
+      </choice>
    </define>
    <define name="model.listLike_sequence">
-      <empty/>
+      <ref name="listWit"/>
    </define>
    <define name="model.listLike_sequenceOptional">
-      <empty/>
+      <optional>
+         <ref name="listWit"/>
+      </optional>
    </define>
    <define name="model.listLike_sequenceOptionalRepeatable">
-      <empty/>
+      <zeroOrMore>
+         <ref name="listWit"/>
+      </zeroOrMore>
    </define>
    <define name="model.listLike_sequenceRepeatable">
-      <notAllowed/>
+      <oneOrMore>
+         <ref name="listWit"/>
+      </oneOrMore>
    </define>
    <define name="model.noteLike">
       <notAllowed/>
@@ -700,41 +767,29 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
    <define name="model.lLike">
       <choice>
          <ref name="l"/>
-         <ref name="alexandrin"/>
       </choice>
    </define>
    <define name="model.lLike_alternation">
       <choice>
          <ref name="l"/>
-         <ref name="alexandrin"/>
       </choice>
    </define>
    <define name="model.lLike_sequence">
       <ref name="l"/>
-      <ref name="alexandrin"/>
    </define>
    <define name="model.lLike_sequenceOptional">
       <optional>
          <ref name="l"/>
-      </optional>
-      <optional>
-         <ref name="alexandrin"/>
       </optional>
    </define>
    <define name="model.lLike_sequenceOptionalRepeatable">
       <zeroOrMore>
          <ref name="l"/>
       </zeroOrMore>
-      <zeroOrMore>
-         <ref name="alexandrin"/>
-      </zeroOrMore>
    </define>
    <define name="model.lLike_sequenceRepeatable">
       <oneOrMore>
          <ref name="l"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="alexandrin"/>
       </oneOrMore>
    </define>
    <define name="model.pLike">
@@ -784,7 +839,9 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
       <notAllowed/>
    </define>
    <define name="model.global.edit">
-      <notAllowed/>
+      <choice>
+         <ref name="app"/>
+      </choice>
    </define>
    <define name="model.divPart">
       <choice>
@@ -845,6 +902,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
    <define name="model.publicationStmtPart.detail">
       <choice>
          <ref name="model.ptrLike"/>
+         <ref name="date"/>
       </choice>
    </define>
    <define name="model.quoteLike">
@@ -1052,6 +1110,17 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
          <ref name="model.ptrLike.form"/>
       </choice>
    </define>
+   <define name="model.limitedPhrase">
+      <choice>
+         <ref name="model.hiLike"/>
+         <ref name="model.emphLike"/>
+         <ref name="model.pPart.msdesc"/>
+         <ref name="model.pPart.editorial"/>
+         <ref name="model.ptrLike"/>
+         <ref name="model.phrase.xml"/>
+         <ref name="model.pPart.data"/>
+      </choice>
+   </define>
    <define name="model.divLike">
       <notAllowed/>
    </define>
@@ -1062,10 +1131,17 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
       <notAllowed/>
    </define>
    <define name="model.teiHeaderPart">
-      <notAllowed/>
+      <choice>
+         <ref name="encodingDesc"/>
+      </choice>
    </define>
    <define name="model.sourceDescPart">
       <notAllowed/>
+   </define>
+   <define name="model.encodingDescPart">
+      <choice>
+         <ref name="variantEncoding"/>
+      </choice>
    </define>
    <define name="model.resourceLike">
       <choice>
@@ -1092,7 +1168,15 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
       </report>
             </rule>
          </pattern>
-         <ref name="att.global.attributes"/>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
          <ref name="att.declaring.attributes"/>
          <ref name="att.written.attributes"/>
          <optional>
@@ -1109,11 +1193,46 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
          <empty/>
       </element>
    </define>
+   <define name="date">
+      <element name="date">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a date in any format. [3.5.4. Dates and Times 2.2.4. Publication, Distribution, Licensing, etc. 2.6. The Revision Description 3.11.2.4. Imprint, Size of a Document, and Reprint Information 15.2.3. The Setting Description 13.3.6. Dates and Times]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.gLike"/>
+               <ref name="model.phrase"/>
+               <ref name="model.global"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.responsibility.attribute.cert"/>
+         <ref name="att.global.source.attribute.source"/>
+         <ref name="att.datable.attributes"/>
+         <ref name="att.editLike.attributes"/>
+         <ref name="att.dimensions.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="author">
       <element name="author">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">in a bibliographic reference, contains the name(s) of an author, personal or corporate, of a work; for example in the same form as that provided by a recognized bibliographic name authority. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement]</a:documentation>
          <ref name="macro.phraseSeq"/>
-         <ref name="att.global.attributes"/>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
          <ref name="att.naming.attributes"/>
          <empty/>
       </element>
@@ -1122,9 +1241,16 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
       <element name="title">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a title for any kind of work. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.5. The Series Statement]</a:documentation>
          <ref name="macro.paraContent"/>
-         <ref name="att.global.attributes"/>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
          <ref name="att.canonical.attributes"/>
-         <ref name="att.datable.attributes"/>
          <empty/>
       </element>
    </define>
@@ -1149,29 +1275,22 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
             </rule>
          </pattern>
          <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
          <ref name="att.global.attribute.xmllang"/>
          <ref name="att.global.attribute.xmlbase"/>
          <ref name="att.global.attribute.xmlspace"/>
          <ref name="att.global.rendition.attribute.rend"/>
          <ref name="att.global.rendition.attribute.style"/>
          <ref name="att.global.rendition.attribute.rendition"/>
-         <ref name="att.global.responsibility.attribute.cert"/>
-         <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
-         <attribute name="n">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number) gives a number (or other label) for an element, which is not necessarily unique within the document.</a:documentation>
-            <data type="nonNegativeInteger"/>
-         </attribute>
          <optional>
-            <attribute name="subtype" ns="http://www.example.com/ns/nonTEI">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                       name="part"
+                       a:defaultValue="N">
+               <a:documentation>specifies whether or not its parent element is fragmented in some way, typically by some other overlapping structure: for example a speech which is divided between two or more verse stanzas, a paragraph which is split across a page division, a verse line which is divided between two speakers.</a:documentation>
                <choice>
-                  <value>rimeA</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>rimeB</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>rimeC</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>N</value>
+                  <a:documentation/>
                </choice>
             </attribute>
          </optional>
@@ -1229,23 +1348,245 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
       </report>
             </rule>
          </pattern>
-         <ref name="att.global.attributes"/>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
          <ref name="att.declaring.attributes"/>
+         <optional>
+            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                       name="org"
+                       a:defaultValue="uniform">
+               <a:documentation>(organization) specifies how the content of the division is organized.</a:documentation>
+               <choice>
+                  <value>uniform</value>
+                  <a:documentation/>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                       name="sample"
+                       a:defaultValue="complete">
+               <a:documentation>indicates whether this division is a sample of the original source and if so, from which part.</a:documentation>
+               <choice>
+                  <value>complete</value>
+                  <a:documentation/>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                       name="part"
+                       a:defaultValue="N">
+               <a:documentation>specifies whether or not its parent element is fragmented in some way, typically by some other overlapping structure: for example a speech which is divided between two or more verse stanzas, a paragraph which is split across a page division, a verse line which is divided between two speakers.</a:documentation>
+               <choice>
+                  <value>N</value>
+                  <a:documentation/>
+               </choice>
+            </attribute>
+         </optional>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
                <choice>
-                  <value>quatrain</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>sizain</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>sonnet</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>tercet</value>
+                  <value>chant</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                </choice>
             </attribute>
          </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="app">
+      <element name="app">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(apparatus entry) contains one entry in a critical apparatus, with an optional lemma and usually one or more readings or notes on the relevant passage. [12.1.1. The Apparatus Entry]</a:documentation>
+         <group>
+            <optional>
+               <ref name="lem"/>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <ref name="model.rdgLike"/>
+                  <ref name="model.noteLike"/>
+               </choice>
+            </zeroOrMore>
+         </group>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="lem">
+      <element name="lem">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Lemme) permet de signaler la leçon choisie pour le texte édité [12.1. The Apparatus Entry, Readings, and Witnesses]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.divLike"/>
+               <ref name="model.divPart"/>
+               <ref name="model.gLike"/>
+               <ref name="model.phrase"/>
+               <ref name="model.inter"/>
+               <ref name="model.global"/>
+               <ref name="model.rdgPart"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
+         <ref name="att.textCritical.attribute.subtype"/>
+         <ref name="att.written.attribute.hand"/>
+         <ref name="att.witnessed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="rdg">
+      <element name="rdg">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reading) contains a single reading within a textual variation. [12.1. The Apparatus Entry, Readings, and Witnesses]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.divLike"/>
+               <ref name="model.divPart"/>
+               <ref name="model.gLike"/>
+               <ref name="model.phrase"/>
+               <ref name="model.inter"/>
+               <ref name="model.global"/>
+               <ref name="model.rdgPart"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
+         <ref name="att.textCritical.attribute.subtype"/>
+         <ref name="att.written.attribute.hand"/>
+         <ref name="att.witnessed.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">classifies the reading according to some useful typology.</a:documentation>
+               <choice>
+                  <value>om</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>rasura</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>graphic</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>semantic</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="listWit">
+      <element name="listWit">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(witness list) lists definitions for all the witnesses referred to by a critical apparatus, optionally grouped hierarchically. [12.1. The Apparatus Entry, Readings, and Witnesses]</a:documentation>
+         <group>
+            <optional>
+               <ref name="model.headLike"/>
+            </optional>
+            <oneOrMore>
+               <choice>
+                  <ref name="witness"/>
+                  <ref name="listWit"/>
+               </choice>
+            </oneOrMore>
+         </group>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
+         <ref name="att.sortable.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="witness">
+      <element name="witness">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains either a description of a single witness referred to within the critical apparatus, or a list of witnesses which is to be referred to by a single sigil. [12.1. The Apparatus Entry, Readings, and Witnesses]</a:documentation>
+         <ref name="macro.limitedContent"/>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.facs.attribute.facs"/>
+         <ref name="att.global.source.attribute.source"/>
+         <ref name="att.sortable.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="variantEncoding">
+      <element name="variantEncoding">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">declares the method used to encode text-critical variants. [12.1.1. The Apparatus Entry]</a:documentation>
+         <empty/>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
+         <attribute name="method">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates which method is used to encode the apparatus of variants.</a:documentation>
+            <choice>
+               <value>parallel-segmentation</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
+         <attribute name="location">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates whether the apparatus appears within the running text or external to it.</a:documentation>
+            <choice>
+               <value>internal</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="oddbyexample-variantEncoding-location-variantEncodingLocation-constraint-rule-5">
+            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns="http://www.tei-c.org/ns/1.0"
+                      context="tei:variantEncoding">
+               <sch:assert test="(@location != 'external') or (@method != 'parallel-segmentation')">
+              The @location value "external" is inconsistent with the
+              parallel-segmentation method of apparatus markup.</sch:assert>
+            </sch:rule>
+         </pattern>
          <empty/>
       </element>
    </define>
@@ -1254,16 +1595,19 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(TEI header) supplies descriptive and declarative metadata associated with a digital resource or set of resources. [2.1.1. The TEI Header and Its Components 15.1. Varieties of Composite Text]</a:documentation>
          <group>
             <ref name="fileDesc"/>
-      
             <zeroOrMore>
                <ref name="model.teiHeaderPart"/>
             </zeroOrMore>
-      
-      
-        
-      
          </group>
-         <ref name="att.global.attributes"/>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
          <empty/>
       </element>
    </define>
@@ -1273,27 +1617,21 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
          <group>
             <group>
                <ref name="titleStmt"/>
-        
-          
-        
-        
-          
-        
                <ref name="publicationStmt"/>
-        
-          
-        
-        
-          
-        
             </group>
-      
             <oneOrMore>
                <ref name="sourceDesc"/>
             </oneOrMore>
-      
          </group>
-         <ref name="att.global.attributes"/>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
          <empty/>
       </element>
    </define>
@@ -1301,18 +1639,22 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
       <element name="titleStmt">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(title statement) groups information about the title of a work and those responsible for its content. [2.2.1. The Title Statement 2.2. The File Description]</a:documentation>
          <group>
-      
             <oneOrMore>
                <ref name="title"/>
             </oneOrMore>
-      
-      
             <zeroOrMore>
                <ref name="model.respLike"/>
             </zeroOrMore>
-      
          </group>
-         <ref name="att.global.attributes"/>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
          <empty/>
       </element>
    </define>
@@ -1320,27 +1662,27 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
       <element name="publicationStmt">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publication statement) groups information concerning the publication or distribution of an electronic or other text. [2.2.4. Publication, Distribution, Licensing, etc. 2.2. The File Description]</a:documentation>
          <choice>
-      
-	           <oneOrMore>
+            <oneOrMore>
                <group>
-	  
-	                 <ref name="model.publicationStmtPart.agency"/>
-	  
-	  
-	                 <zeroOrMore>
+                  <ref name="model.publicationStmtPart.agency"/>
+                  <zeroOrMore>
                      <ref name="model.publicationStmtPart.detail"/>
                   </zeroOrMore>
-	  
-	              </group>
+               </group>
             </oneOrMore>
-      
-      
-	           <oneOrMore>
+            <oneOrMore>
                <ref name="model.pLike"/>
             </oneOrMore>
-      
          </choice>
-         <ref name="att.global.attributes"/>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
          <empty/>
       </element>
    </define>
@@ -1359,7 +1701,15 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
                </choice>
             </oneOrMore>
          </choice>
-         <ref name="att.global.attributes"/>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
          <optional>
             <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                        name="default"
@@ -1371,6 +1721,27 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
                </choice>
             </attribute>
          </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="encodingDesc">
+      <element name="encodingDesc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(encoding description) documents the relationship between an electronic text and the source or sources from which it was derived. [2.3. The Encoding Description 2.1.1. The TEI Header and Its Components]</a:documentation>
+         <oneOrMore>
+            <choice>
+               <ref name="model.encodingDescPart"/>
+               <ref name="model.pLike"/>
+            </choice>
+         </oneOrMore>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
          <empty/>
       </element>
    </define>
@@ -1392,7 +1763,15 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
          <ns xmlns="http://purl.oclc.org/dsdl/schematron"
              prefix="rng"
              uri="http://relaxng.org/ns/structure/1.0"/>
-         <ref name="att.global.attributes"/>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
          <empty/>
       </element>
    </define>
@@ -1410,7 +1789,15 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
                <ref name="model.global"/>
             </zeroOrMore>
          </group>
-         <ref name="att.global.attributes"/>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
          <ref name="att.declaring.attributes"/>
          <ref name="att.written.attributes"/>
          <empty/>
@@ -1420,167 +1807,143 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
       <element name="body">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(text body) contains the whole body of a single unitary text, excluding any front or back matter. [4. Default Text Structure]</a:documentation>
          <group>
-      
-      
             <zeroOrMore>
                <ref name="model.global"/>
             </zeroOrMore>
-      
-      
-      
             <optional>
                <group>
-          
                   <ref name="model.divTop"/>
-          
-          
                   <zeroOrMore>
                      <choice>
                         <ref name="model.global"/>
                         <ref name="model.divTop"/>
                      </choice>
                   </zeroOrMore>
-          
                </group>
             </optional>
-      
-      
-      
             <optional>
                <group>
-          
                   <ref name="model.divGenLike"/>
-          
-          
                   <zeroOrMore>
                      <choice>
                         <ref name="model.global"/>
                         <ref name="model.divGenLike"/>
                      </choice>
                   </zeroOrMore>
-          
                </group>
             </optional>
-      
-      
-        
             <choice>
-          
-          
                <oneOrMore>
                   <group>
-              
                      <ref name="model.divLike"/>
-              
-              
                      <zeroOrMore>
                         <choice>
                            <ref name="model.global"/>
                            <ref name="model.divGenLike"/>
                         </choice>
                      </zeroOrMore>
-              
                   </group>
                </oneOrMore>
-          
-          
-          
                <oneOrMore>
                   <group>
-              
                      <ref name="model.div1Like"/>
-              
-              
                      <zeroOrMore>
                         <choice>
                            <ref name="model.global"/>
                            <ref name="model.divGenLike"/>
                         </choice>
                      </zeroOrMore>
-              
                   </group>
                </oneOrMore>
-          
-          
                <group>
                   <oneOrMore>
                      <group>
-              
                         <ref name="model.common"/>
-              
-              
                         <zeroOrMore>
                            <ref name="model.global"/>
                         </zeroOrMore>
-              
                      </group>
                   </oneOrMore>
-            
                   <optional>
                      <choice>
-                
-                
                         <oneOrMore>
                            <group>
-                    
                               <ref name="model.divLike"/>
-                    
-                    
                               <zeroOrMore>
                                  <choice>
                                     <ref name="model.global"/>
                                     <ref name="model.divGenLike"/>
                                  </choice>
                               </zeroOrMore>
-                    
                            </group>
                         </oneOrMore>
-                
-                
-                
                         <oneOrMore>
                            <group>
-                    
                               <ref name="model.div1Like"/>
-                    
-                    
                               <zeroOrMore>
                                  <choice>
                                     <ref name="model.global"/>
                                     <ref name="model.divGenLike"/>
                                  </choice>
                               </zeroOrMore>
-                    
                            </group>
                         </oneOrMore>
-                
                      </choice>
                   </optional>
-            
                </group>
             </choice>
-        
-      
-      
-      
             <zeroOrMore>
                <group>
-          
                   <ref name="model.divBottom"/>
-          
-          
                   <zeroOrMore>
                      <ref name="model.global"/>
                   </zeroOrMore>
-          
                </group>
             </zeroOrMore>
-      
          </group>
-         <ref name="att.global.attributes"/>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.n"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.source.attribute.source"/>
          <ref name="att.declaring.attributes"/>
          <empty/>
       </element>
+   </define>
+   <define name="att.textCritical.attribute.subtype">
+      <optional>
+         <attribute name="subtype" ns="http://www.tei-c.org/ns/nonTEI">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.witnessed.attributes">
+      <ref name="att.witnessed.attribute.wit"/>
+   </define>
+   <define name="att.witnessed.attribute.wit">
+      <optional>
+         <attribute name="wit">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(witness or witnesses) contains a space-delimited list of one or more pointers indicating the witnesses which attest to a given reading.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="model.rdgLike">
+      <choice>
+         <ref name="rdg"/>
+      </choice>
+   </define>
+   <define name="model.rdgPart">
+      <notAllowed/>
    </define>
    <define name="model.persNamePart">
       <notAllowed/>
@@ -1606,11 +1969,17 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
    <define name="model.ptrLike.form">
       <notAllowed/>
    </define>
-   <define name="alexandrin">
-      <element name="alexandrin" ns="http://www.example.com/ns/nonTEI">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-         <text/>
-      </element>
+   <define name="att.global.facs.attribute.facs">
+      <optional>
+         <attribute name="facs">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(facsimile) points to all or part of an image which corresponds with the content of the element.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
    </define>
    <start>
       <choice>

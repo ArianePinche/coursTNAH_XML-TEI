@@ -172,7 +172,29 @@
             <elementSpec ident="l" mode="change">
                <attList>
                   <attDef ident="part" mode="delete"/>
+                  <attDef ident="n" mode="change" usage="req">
+                     <datatype>
+                        <dataRef key="teidata.count"/>
+                     </datatype>
+                  </attDef>
+                  <attDef ident="subtype" mode="add" ns="http://www.example.com/ns/nonTEI">
+                     <valList mode="add" type="closed">
+                        <valItem ident="rimeA"/>
+                        <valItem ident="rimeB"/>
+                        <valItem ident="rimeC"/>
+                     </valList>
+                  </attDef>
                </attList>
+            </elementSpec>
+            <elementSpec ident="alexandrin" mode="add"
+               ns="http://www.example.com/ns/nonTEI">
+               <classes>
+                  <memberOf key="model.lLike"/>
+                  <memberOf key="macro.paraContent"/>
+               </classes>
+               <content>
+                  <textNode/>
+               </content>
             </elementSpec>
             <elementSpec ident="lg" mode="change">
                <attList>

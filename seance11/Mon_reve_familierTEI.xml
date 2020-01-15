@@ -20,7 +20,7 @@
          <lg type="sonnet">
             <lg type="quatrain" n="1">
                <alexandrin xmlns="http://www.example.com/ns/nonTEI">Je fais souvent ce rêve étrange et pénétrant</alexandrin>
-               <l>D'une femme inconnue, et que j'aime, et qui m'aime</l>
+               <l xmlns:nontei="http://www.example.com/ns/nonTEI" nontei:subtype="rimeZ">D'une femme inconnue, et que j'aime, et qui m'aime</l>
                <l>Et qui n'est, chaque fois, ni tout à fait la même</l>
                <l>Ni tout à fait une autre, et m'aime et me comprend.</l>
             </lg>
