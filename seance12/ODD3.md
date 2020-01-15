@@ -95,7 +95,7 @@ Contraindre l’activation d’un élément ou d’un attribut en fonction d’u
      <s:rule context="tei:app[@type='structure']">
       <s:assert test="@from and @to">
       The beginning and the endpoint of the
-        lemma have to be identifie/
+        lemma have to be identify/
        </s:assert>
      </s:rule>
    </constraint>
