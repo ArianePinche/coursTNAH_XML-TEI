@@ -103,7 +103,8 @@ Liste des types de données TEI :<https://www.tei-c.org/release/doc/tei-p5-doc/f
 - Création d'un nouvel élément qui n'appartient pas au domaine TEI :
 
 ```xml
-<elementSpec ident="alexandrin" mode="add" ns="http://www.example.com/ns/nonTEI">
+<elementSpec ident="alexandrin" mode="add" 
+             ns="http://www.example.com/ns/nonTEI">
     <classes>
        <memberOf key="model.lLike"/>
        <memberOf key="macro.paraContent"/>
@@ -125,7 +126,7 @@ Liste des types de données TEI :<https://www.tei-c.org/release/doc/tei-p5-doc/f
  - Modifier les valeurs de l'attribut type des `<rdg>` en faisant une liste fermée comprenant les valeurs :
 	- graphic
 	- semantic
-- Limiter n'autoriser que les nombres entiers dans les valeurs de l'attribut @n de l'élément l
+- N'autoriser que les nombres entiers dans les valeurs de l'attribut @n de l'élément l
 
 ---
 ## Documenter son ODD
