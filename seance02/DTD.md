@@ -21,18 +21,23 @@ Les documents XML qui respectent, en plus de la syntaxe XML, les règles d’un 
 `<!ELEMENT nom_element (nom_sousElement)>`
 - Déclaration d’une séquence de sous-éléments : `<!ELEMENT nom_element (nom_sousElement1, nom_sousElement2)>` 
 *Attention : l’ordre de déclaration des sous-éléments est signifiant.*
-	- Nombre d’éléments autorisés :
+
+---
+
+- Nombre d’éléments autorisés :
 		* `?` zéro ou un ;
        * `*` zéro ou plusieurs éléments ;
        * `+` un ou plusieurs éléments.
 - Exemple : `<!ELEMENT texte (chapitre+)>`
+
 NB : si vous voulez déclarer des sous-éléments et du  texte dans un élément, il faut déclarer #PCDATA avant les autres éléments.
-----       
+
+---      
        
 ### Déclaration des attributs : 
 - `<!ATTlist nom_element nom_attribut	type_Données	type_Attribut>`
 	- Les données d’attributs :
-		* `CDATA` n’importe quelle chaîne de caractère ;
+		* `CDATA` n’importe quelle chaîne de caractères;
 		* `ID` doit contenir une valeur unique dans le document XML. Un seul attribut de ce type par élément est accepté.
 		* `IDREF` fait référence à un attribut de type ID d’un élément du document. Les attributs Idref sont généralement utilisés pour établir des relations entre les éléments.
 ---
@@ -49,3 +54,12 @@ NB : si vous voulez déclarer des sous-éléments et du  texte dans un élément
 - DTD interne : `<!DOCTYPE ElementRacine [<!ELEMENT nom_element (contenu)>]>`
 - DTD externe (à déclarer avant l’élément racine) : 
 `<!DOCTYPE ElementRacine SYSTEM "nomDTD.dtd">`       
+
+---
+
+## Exercice 
+
+À l'aide du lien suivant, encoder la lettre LXXXIX des *Liaisons dangereuses* : https://gallica.bnf.fr/ark:/12148/bpt6k9738925r/f23.item 
+
+- Déterminez les différentes zones de texte et les informations que l'encodage pourrait permettre d'expliciter;
+- Proposer un encodage XML de la lettre et sa dtd associée;
