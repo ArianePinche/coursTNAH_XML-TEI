@@ -40,10 +40,10 @@ Il se compose des unités suivantes:
 * [TEI Board of Directors](http://www.tei-c.org/Board/);
 * [TEI Technical Council](http://www.tei-c.org/activities/council/);
 * [Membres institutionnels et individuels](http://members.tei-c.org/);
-* [TEI Workgroups](http://www.tei-c.org/Activities/Workgroups/), par ex. :
+* [TEI Workgroups](http://www.tei-c.org/Activities/Workgroups/);
+* [Special Interest Groups](http://www.tei-c.org/Activities/SIG/), par exemple :
   * [TEI Manuscripts Special Interest Group](http://www.tei-c.org/Activities/SIG/Manuscript/);
   * [Correspondence SIG](http://www.tei-c.org/Activities/SIG/Correspondence/);
-* [Special Interest Groups](http://www.tei-c.org/Activities/SIG/).
 
 ----
 
@@ -77,7 +77,7 @@ TEI est un set de balises prédéfini et documenté dans les [TEIguidelines](htt
 
 ---
 
-Pour utiliser un set de balises TEI, il faut déclarer le nom de domaine TEI (name space) dans l'élément racine du document XML grâce à ce qu’on appelle une adresse URI qui pointe vers une description du set de données (= déclaration de nom de domaine).
+Pour utiliser un set de balises TEI, il faut déclarer l'espace de nom TEI (name space) dans l'élément racine du document XML grâce à une adresse URI qui pointe vers une description du set de données.
 
 Exemple : `<TEI xmlns="http://www.tei-c.org/ns/1.0">`
 
