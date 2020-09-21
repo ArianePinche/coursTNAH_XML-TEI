@@ -105,7 +105,8 @@ Les éléments doivent tous strictement respecter le principe d'imbrication.
 
 #### Les attributs
 ```XML
-<MiseEnValeur rendu="rouge italique" position="centrePage">
+<MiseEnValeur rendu="rouge italique" 
+              position="centrePage">
   texte
 </MiseEnValeur>
 ```
@@ -132,7 +133,7 @@ Un encodage qui respecte ces grands principes du XML est dit __bien formé__.
 
 Les entités sont des appels pour insérer dans le XML des caractères interdits ou bien des séquences de code définies au préalable dans une DTD.
 
-Astuce : convertisseur de caractères (pour obtenir le code hexadécimal), <http://hapax.qc.ca/conversion.fr.html> 
+Astuce : convertisseur de caractères (pour obtenir le code decimal), <http://hapax.qc.ca/conversion.fr.html> 
 
 ----
 
@@ -153,4 +154,11 @@ Pour réviser :
 **Why do we encode : E. Pierazzo**
 
 https://www.youtube.com/watch?v=R0ncI_rr1z4&list=PL77mHK9JuenN9NXeXQbVcUORz7HZk-9Pv&index=2 
+
+___
+ Liens de téléchargement :
+ 
+Oxygen Editor : https://www.oxygenxml.com/xml_editor/download_oxygenxml_editor.html?os=Linux
+XMLmind : https://www.xmlmind.com/xmleditor/download.shtml
+ 
 
