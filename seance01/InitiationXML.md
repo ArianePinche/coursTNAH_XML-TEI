@@ -2,7 +2,7 @@
 
 ## Matérialité du texte
 - 	Le texte brut (.txt) / *plain text* se compose de caractères pour lesquels ils existent plusieurs répertoires :
-		- ASCII American Standard Code for Information Interchange)
+		- ASCII (American Standard Code for Information Interchange)
 		- ISO 8859-1 (Latin 1)
 		- UTF-8 (Universal Character Set Transformation Format - 8 bits)
 
@@ -64,13 +64,6 @@ Depuis 1998, XML est un langage libre et documenté. XML est également un **lan
 - la migration vers d’autres plates-formes, d’autres logiciels, d’autres formats.
 
 ---
-## Un peu d'Histoire...
-
-- SGML (1970), Standard Generalized Markup Language;
-	- HTML, HyperText Markup Language: affiche des données notamment sur le Web;
-	- XML, eXtensible Markup Language: contient et structure des données textuelles.
-
----
 
 ## Structure générale du XML
 
@@ -91,6 +84,15 @@ Les éléments XML suivent un principe d’arborescence par imbrication.
 ```
 
 Ainsi les éléments *enfants* héritent des propriétés des éléments *parents*
+
+
+
+---
+## Un peu d'Histoire...
+
+- SGML (1970), Standard Generalized Markup Language;
+	- HTML, HyperText Markup Language: affiche des données notamment sur le Web;
+	- XML, eXtensible Markup Language: contient et structure des données textuelles.
 
 ---
 
