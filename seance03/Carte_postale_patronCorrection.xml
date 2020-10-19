@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE objet [
+<!ELEMENT objet (face+)>
+<!ELEMENT face (zone*)>
+<!ELEMENT zone (#PCDATA|zone|paragraphe|salutation|adresse|lb)*> 
+<!-- Attention si on veut déclarer du texte et des éléments, il faut mettre #PCDATA en premier -->
+
+<!ELEMENT paragraphe (#PCDATA|lb)*>
+<!ELEMENT lb EMPTY>
+<!ELEMENT salutation (formulePolitesse, signature)> <!-- Ici l'ordre des éléments est contraint -->
+<!ELEMENT formulePolitesse (#PCDATA|lb)*>
+<!ELEMENT signature (#PCDATA)>
+<!ELEMENT adresse (nom, rue, ville)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT rue (#PCDATA)>
+<!ELEMENT ville (#PCDATA|corr)*>
+<!ELEMENT corr (#PCDATA)>
+
+<!ATTLIST objet type CDATA #REQUIRED>
+<!ATTLIST face type (recto|verso) #REQUIRED>
+<!ATTLIST face facs CDATA #REQUIRED>
+<!ATTLIST zone type CDATA #REQUIRED>
+<!ATTLIST zone rend CDATA #IMPLIED>
+<!ATTLIST zone facs CDATA #IMPLIED>
+<!ATTLIST corr rend CDATA #IMPLIED>
+<!ATTLIST corr cert (haute|basse) #IMPLIED>
+
+] >
+
+<objet type="Lettre">
+   <face type="recto" facs="1"/>
+   <face type="verso" facs="2">
+      <zone type="en-tête">
+         <zone type="legende">78 - Les sables d'Olonne (vendée)<lb/>le
+            port</zone>
+         <zone type="timbre" rend="haut centre" facs="3">Premier timbre représentant à droite une
+            tour et à gauche un visage de femme surmontée d'une haute coiffe</zone>
+         <zone type="tamponPoste" rend="haut droite" facs="4">Timbre bleu et rouge de la république
+            française, tampon de la poste année 85 les sables d'Olonne Vendée 1967 par-dessus</zone>
+      </zone>
+      <zone type="message">
+         <paragraphe>Bientôt sur le chemin de retour <lb/> avons eu du beau temps tout<lb/> le mois
+            de juillet. Vous souhaite<lb/> à tous la même chose.<lb/>
+         </paragraphe>
+         <paragraphe>J'espère que vous êtes tous en bonne<lb/> santé. A chacun son tour, le<lb/> bon
+            temps et le repos.<lb/>
+         </paragraphe>
+         <salutation>
+            <formulePolitesse>avec d'affectueuses pensées et<lb/> bons baisers à
+               tous</formulePolitesse>
+            <signature>Marcelle</signature>
+         </salutation>
+      </zone>
+      <zone type="destinataire">
+         <adresse>
+            <nom>Mme Veyssade Lucienne</nom>
+            <rue>31, rue du Président Kennedy</rue>
+            <ville>ALfortville <corr rend="rature" cert="basse">val ???</corr>) val de Marne</ville>
+         </adresse>
+      </zone>
+   </face>
+</objet>
