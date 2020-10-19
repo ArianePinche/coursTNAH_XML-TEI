@@ -131,7 +131,7 @@ NB : Dans une édition numérique, il est conseillé d'utiliser les caractères 
 
 Pour les caractères qui n'existent pas dans toutes les fontes, passer par l'entité décimale XML.
 
-Astuce : convertisseur pour les caractères <https://r12a.github.io/app-conversion>
+Astuce : convertisseur pour les caractères http://hapax.qc.ca/conversion.fr.html
 
 ---
 

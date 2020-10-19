@@ -126,7 +126,7 @@ Exemples :
 * Le Misanthrope
 	* Donner le chemin le plus rapide de la racine TEI vers le nom du locuteur de la troisième réplique de l'acte I, scène 1;
 * Le Cid
-	* Donner le chemin le rapide de la racine TEI le nom du deuxième personnage de liste des personnages déclarée dans la préface.
+	* Donner le chemin le rapide de la racine TEI vers le nom du deuxième personnage de la liste des personnages déclarée dans la préface.
 
 ---
 #### Traduire les expressions suivantes :  
