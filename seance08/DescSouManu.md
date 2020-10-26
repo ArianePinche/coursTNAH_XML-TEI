@@ -4,7 +4,7 @@
 
 ## EAD (Encoded Archival Description)
 
-EAD est une DTD (un schéma d’utilisation) de XML.
+EAD est une DTD de XML.
 
 * 2000, encodage en XML EAD du catalogue général des manuscrits des bibliothèques publiques de France.
 * 2010, la DeMarch recommandation est publiée.

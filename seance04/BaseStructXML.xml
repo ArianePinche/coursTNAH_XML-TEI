@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>  <!-- Instruction de traitement XML, Version XML, Version d'encodage -->
 
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!-- schéma qui restreint les possibilités d'emplois de balises, moyen de contrôler l'encodage de caractères. -->
+<!-- schéma qui restreint les possibilités d'emplois de balises -->
 
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <!-- @xmlns = espace de nom, on déclare qu'on propose un document conforme aux standards de la TEI -->
@@ -23,8 +23,9 @@
     </teiHeader>
     <!-- Encodage des données textuelles -->
     <text>
-        <front/>
+        <front>
         <!-- Données qui relèvent de la préface, de l'introduction -->
+        </front>
         <body xml:lang="fr">
             <div type="book">
                 <!-- Mise en place de la structuration du texte, l'imbrication peut se multiplier autant que nécessaire -->
@@ -45,7 +46,8 @@
                 </div>
             </div>
         </body>
-        <back/>
-        <!-- Données qui relèvent de la postface, de l'épilogue -->
+        <back>
+        <!-- Données qui relèvent de la postface, de l'épilogue, mais aussi glossaires -->
+        </back>
     </text>
 </TEI>
