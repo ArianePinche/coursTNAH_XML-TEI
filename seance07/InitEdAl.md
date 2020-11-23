@@ -97,24 +97,6 @@ Corpus test : La séquence de sainte Eulalie
 * Corrections : `<choice><sic></sic><corr></corr></choice>`.
 
 ---
-#### Traitement des variations graphiques dans un fichier TEI
-
-[*Le module gaiji*](<http://www.tei-c.org/release/doc/tei-p5-doc/en/html/WD.html>)
-`<encodingDesc>`
-         `<charDecl>`
-            `<char xml:id="q1">`
-               `<charName>Q SEMICOLON</charName>`
-               `<charProp>`
-                  `<localName>entity</localName>`
-                 `<value>&#61868;</value>`
-               `</charProp>`
-            `</char>`
-         `</charDecl>`
-`</encodingDesc>`
-[...]
-`<l>Niule cose non la pouret om<g ref="#q1">que</g> pleier.</l>`
-
----
 
 *Déclaration d'entités*
 
