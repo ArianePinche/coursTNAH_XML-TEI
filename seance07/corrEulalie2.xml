@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<!DOCTYPE TEI [
+<!ENTITY omacron-eo "<choice><abbr>&#333;</abbr><expan><ex>e</ex>o</expan></choice>">
+]>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <div type="cantilene">
+            <head>Cantilène de sainte Eulalie</head>
+            <pb facs="https://gallica.bnf.fr/ark:/12148/btv1b84526286/f288.item" n="141v"/>
+            <lg><l>Buona pulcella fut <persName ref="#eulalia"><choice><orig>e</orig><reg>E</reg></choice>ulalia</persName>.</l>
+               <l>Bel a<choice><orig>u</orig><reg>v</reg></choice>ret corps, bellezour anima.</l></lg>
+            <lg><l>Voldrent la veintre li D<choice><abbr>&#333;</abbr><expan><ex>e</ex>o</expan></choice> inimi,</l>
+               <l>Voldrent la faire diaule servir.</l></lg>
+            <lg><l>Elle no'nt eskoltet les mals conselliers</l>
+               <l>Qu'elle D&omacron-eo; raneiet, chi maent sus en ciel,</l></lg>
+            <lg><l>Ne por or ned argent ne paramenz</l>
+               <l>Por manatce regiel ne preiement.</l></lg>
+            <lg><l>Niule cose non la pouret omque pleier</l>
+               <l>La polle sempre non amast lo D&omacron-eo; menestier.</l></lg>
+            <lg><l>E por o fut presentede <persName ref="#maximiien">Maximiien</persName>,</l>
+               <l>Chi rex eret a cels dis soure pagiens.</l></lg>
+            <lg><l>Il li enortet, dont lei nonque chielt,</l>
+               <l>Qued elle fuiet lo nom chrestiien.</l></lg>
+            <lg><l>Ell'ent adunet lo suon element:</l>
+               <l>Melz sostendreiet les empedementz</l></lg>
+            <lg><l>Qu'elle perdesse sa virginitet</l>
+               <l>Por o's furet morte a grand honestet.</l></lg>
+            <lg><l>Enz enl fou lo getterent com arde tost.</l>
+               <l>Elle colpes non auret, por o nos coist.</l></lg>
+            <lg><l>A czo nos voldret concreidre li&amp; rex pagiens.</l>
+               <l>Ad une spede li roveret tolir lo chief.</l></lg>
+            <lg><l>La domnizelle celle kose non contredist</l>
+               <l>Volt lo seule lazsier, si ruovet Krist.</l></lg>
+            <lg><l>In figure de colomb volat a ciel.</l>
+               <l>Tuit oram que por nos degnet preier</l></lg>
+            <lg><l>Qued auisset de nos <persName ref="christ">Christus</persName> mercit</l>
+               <l>Post la mort et a lui nos laist venir</l></lg>
+            <l>Par souue clementia.</l>
+         </div>
+      </body>
+  </text>
+</TEI>
