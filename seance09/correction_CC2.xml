@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="full">La Comédie Humaine</title>
+            <title type="full">Scènes de la vie privée</title>
+            <title type="main">Le Père Goriot</title>
+            <author><persName><forename>Honoré</forename>
+               <nameLink>de</nameLink>
+                  <surname>Balzac</surname></persName></author>
+            <respStmt>
+               <resp>Encodage réalisé dans le cadre du contôle continu du cours de XML-TEI</resp>
+               <persName>
+                  <forename>Prenom</forename>
+                  <surname>Nom</surname>
+               </persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher><persName><forename>Alexandre</forename>
+                  <surname>Houssiaux</surname></persName></publisher>
+            <pubPlace>Paris</pubPlace>
+            <date when-iso="1855">1855</date>
+            <distributor
+               facs="https://fr.wikisource.org/wiki/Page:%C5%92uvres_compl%C3%A8tes_de_H._de_Balzac,_IX.djvu/375"
+               >Wikisource</distributor>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/3.0/deed.fr">Licence
+                  Creative Commons Attribution-partage dans les mêmes conditions</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title type="full">La Comédie Humaine</title>
+                  <title type="full">Scènes de la vie privée</title>
+                  <title type="main">Le Père Goriot</title>
+                  <author>
+                     <forename>Honoré</forename>
+                     <nameLink>de</nameLink>
+                     <surname>Balzac</surname>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher><persName><forename>Alexandre</forename>
+                        <surname>Houssiaux</surname></persName></publisher>
+                  <date when-iso="1855">1855</date>
+                  <pubPlace>Paris</pubPlace>
+                  <distributor
+                     facs="https://fr.wikisource.org/wiki/Page:%C5%92uvres_compl%C3%A8tes_de_H._de_Balzac,_IX.djvu/375"
+                     >Wikisource</distributor>
+                  <availability>
+                     <licence target="https://creativecommons.org/licenses/by-sa/3.0/deed.fr"
+                        >Licence Creative Commons Attribution-partage dans les mêmes
+                        conditions</licence>
+                  </availability>
+               </publicationStmt>
+               <seriesStmt>
+                  <title type="main">Œuvres complètes de Honoré de Balzac</title>
+                  <title type="sub">La Comédie Humaine</title>
+                  <biblScope unit="volume" n="9"/>
+                  <biblScope unit="partie" n="1">Etude de Mœurs</biblScope>
+                  <biblScope unit="livre" n="3">Scènes de la vie parisienne</biblScope>
+                  <biblScope unit="tome" n="1">Histoire des Treize / Le Père Goriot</biblScope>
+                  <biblScope unit="page" from="365" to="366">pp.365-366</biblScope>
+               </seriesStmt>
+               <notesStmt>
+                  <note>Texte imprimé par l'imprimerie De Pillet Fils ainé, rue des
+                     Grands-Augustins, 5.</note>
+               </notesStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="fr">Français</language>
+         </langUsage>
+            <creation>
+               <date>1842</date>
+               <country>France</country>
+               <lang xml:lang="fr"/>
+            </creation>      
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="volume" n="9">
+            <head>TROSIEME LIVRE - SCÈNES DE LA VIE PARISIENNE</head>
+            <!-- [...] -->
+            <div type="livre" n="4">
+               <head>LE PERE GORIOT</head>
+               <!-- [...] -->
+               <p>
+                  <pb n="365" facs="https://gallica.bnf.fr/ark:/12148/bpt6k406167g/f375.item"/>
+                  <!-- [...] -->
+                  <said who="#Claire_de_Beauséant" direct="true" aloud="true" toWhom="#Eugène_de_Rastignac"> — Eh ! bien,
+                     <persName ref="#Eugène_de_Rastignac">monsieur de Rastignac</persName>,
+                     traitez ce monde comme il mérite de l’être. Vous voulez parvenir, je vous
+                     aiderai. Vous sonderez combien est profonde la corruption féminine, vous
+                     toiserez la largeur de la misérable vanité des hommes. Quoique j’aie bien lu
+                     dans ce livre du monde, il y avait des pages qui cependant m’étaient inconnues.
+                     Maintenant je sais tout. Plus froidement vous calculerez, plus avant vous irez.
+                     Frappez sans pitié, vous serez craint. N’acceptez les hommes et les femmes que
+                     comme des chevaux de poste que vous laisserez crever à chaque relais, vous
+                     arriverez ainsi au faîte de vos désirs. Voyez-vous, vous ne serez rien ici si
+                     vous n’avez pas une femme qui s’intéresse à vous. Il vous la faut jeune, riche,
+                     élégante. Mais si vous avez un sentiment vrai, cachez-le comme un trésor ; ne
+                     le laissez jamais soupçonner, vous seriez perdu. Vous ne seriez plus le
+                     bourreau, vous deviendriez la victime. Si jamais vous aimiez, gardez bien votre
+                     secret ! ne le livrez pas avant d’avoir bien su à qui vous ouvrirez votre cœur. 
+                     <pb n="366" facs="https://gallica.bnf.fr/ark:/12148/bpt6k406167g/f376.item"/>
+                     Pour préserver par avance cet amour qui n’existe pas encore, apprenez à vous
+                     méfier de ce monde-ci. Écoutez-moi, <persName ref="#Eugène_de_Rastignac" 
+                        >Miguel</persName>… <seg type="incise">(<rs ref="#Claire_de_Beauséant">Elle</rs> se trompait naïvement de nom sans s’en
+                           apercevoir.)</seg> Il existe quelque chose de plus épouvantable que ne
+                     l’est l’abandon du père par ses deux filles, qui le voudraient mort. C’est la
+                     rivalité des deux sœurs entre elles. <persName ref="#comte de Restaud"
+                        >Restaud</persName> a de la naissance, <rs ref="#Anastasie_de_Restaud">sa femme</rs> a été adoptée, elle a été
+                     présentée ; mais <rs ref="#Delphine_de_Nucingen">sa sœur</rs>, sa riche sœur, la belle madame <persName
+                        ref="#Delphine_de_Nucingen">Delphine de Nucingen</persName>, femme d’un
+                     <rs ref="#Baron_de_Nucingen">homme d’argent</rs>, meurt de chagrin ; la jalousie la dévore, elle est à cent
+                     lieues de sa sœur ; sa sœur n’est plus sa sœur ; ces deux femmes se renient
+                     entre elles comme elles renient leur père. Aussi, <persName
+                        ref="#Delphine_de_Nucingen">madame de Nucingen</persName> laperait-elle
+                     toute la boue qu’il y a entre la <placeName ref="#rue_Saint-Lazare">rue
+                        Saint-Lazare</placeName> et la <placeName ref="#rue_de_Grenelle">rue de
+                           Grenelle</placeName> pour entrer dans <placeName ref="#salon_Beauséant">mon
+                              salon</placeName>. Elle a cru que <persName ref="#Henri_de_Marsay">de
+                                 Marsay</persName> la ferait arriver à son but, et elle s’est faite l’esclave
+                     de de Marsay, elle assomme <persName ref="#Henri_de_Marsay">de
+                        Marsay</persName>. <persName ref="#Henri_de_Marsay">De Marsay</persName> se
+                     soucie fort peu d’elle. Si vous me la présentez, vous serez son Benjamin, elle
+                     vous adorera. Aimez-la si vous pouvez après, sinon servez-vous d’elle. Je la
+                     verrai une ou deux fois, en grande soirée, quand il y aura cohue ; mais je ne
+                     la recevrai jamais le matin. Je la saluerai, cela suffira. Vous vous êtes fermé
+                     la porte de <persName ref="#Anastasie_de_Restaud">la comtesse</persName> pour
+                     avoir prononcé le nom du <persName ref="#Jean-Joachim_Goriot">père
+                        Goriot</persName>. Oui, mon cher, vous iriez vingt fois chez <persName
+                           ref="#Anastasie_de_Restaud">madame Restaud</persName>, vingt fois vous la
+                     trouveriez absente. Vous avez été consigné. Eh ! bien, que le <persName
+                        ref="#Jean-Joachim_Goriot">père Goriot</persName> vous introduise près de
+                     madame <persName ref="#Delphine_de_Nucingen">Delphine de Nucingen</persName>.
+                     La belle <persName ref="#Delphine_de_Nucingen">madame de Nucingen</persName>
+                     sera pour vous une enseigne. Soyez l’homme qu’elle distingue, les femmes
+                     raffoleront de vous. Ses rivales, ses amies, ses meilleures amies, voudront
+                     vous enlever à elle. Il y a des femmes qui aiment l’homme déjà choisi par une
+                     autre, comme il y a de pauvres bourgeoises qui, en prenant nos chapeaux,
+                     espèrent avoir nos manières. Vous aurez des succès. À <placeName ref="#Paris"
+                        >Paris</placeName>, le succès est tout, c’est la clef du pouvoir. Si les
+                     femmes vous trouvent de l’esprit, du talent, les hommes le croiront, si vous ne
+                     les détrompez pas. Vous pourrez alors tout vouloir, vous aurez le pied partout.
+                     Vous saurez alors ce qu’est le monde, une réunion de dupes et de fripons. Ne
+                     soyez ni parmi les uns ni parmi les autres. Je vous donne mon nom comme un fil
+                     d’Ariane pour entrer dans ce labyrinthe. Ne le compromettez pas, <seg type="incise">dit-elle en
+                     recourbant son cou et jetant un regard de reine à l’étudiant</seg>, rendez-le-moi
+                     blanc. Allez, laissez-moi. Nous autres femmes, nous avons aussi nos batailles à
+                     livrer. </said>
+               </p>
+            </div>
+         </div>
+      </body>    
+   </text>
+   <standOff>
+      <listPlace>
+         <place xml:id="Paris">
+            <placeName>Paris</placeName>
+            <note>Capitale, lieu majeur de la Comédie humaine, le lieu par excellence de
+               l'ascension sociale.</note>
+         </place>
+         <place xml:id="salon_Beauséant">
+            <placeName>Salon de la Comtesse de Beauséant.</placeName>
+         </place>
+         <place xml:id="rue_Saint-Lazare">
+            <placeName>rue Saint-Lazare</placeName>
+            <note>La rue Saint-Lazare est située à Paris 8ᵉ et 9ᵉ arrondissements. Rive droite
+               de Paris.</note>
+         </place>
+         <place xml:id="rue_de_Grenelle">
+            <placeName>rue de Grenelle</placeName>
+            <note>La rue de Grenelle est située à Paris dans les 6ᵉ et 7ᵉ arrondissements.
+               Rive gauche de Paris</note>
+         </place>
+      </listPlace>
+      <listPerson>
+         <person xml:id="Jean-Joachim_Goriot">
+            <persName>Jean-Joachim Goriot <surname>père Goriot</surname>
+            </persName>
+            <note>Père de <persName ref="#Anastasie_de_Restaud">Anastasia de
+               Restaud</persName>et de <persName ref="#Delphine_de_Nucingen">Delphine de
+                  Nucingen</persName>.</note>
+         </person>
+         <person xml:id="Eugène_de_Rastignac">
+            <persName>Eugène de Rastignac</persName>
+            <note>Jeune élégant, aristocrate, ambitieux voire romantique, ce personnage est
+               présenté comme un étudiant.</note>
+         </person>
+         <person xml:id="Claire_de_Beauséant">
+            <persName>Claire de Beauséant</persName>
+            <note>Cousine d'<persName ref="#Eugène_de_Rastignac">Eugène de
+               Rastignac</persName> et figure du tout-Paris.</note>
+         </person>
+         <person xml:id="Anastasie_de_Restaud">
+            <persName>Anastasie de Restaud.</persName>
+            <note>Fille aînée du <persName ref="#Anastasie_de_Restaud">père
+               Goriot</persName>.</note>
+         </person>
+         <person xml:id="comte_de_Restaud">
+            <persName>Comte de Restaud</persName>
+            <note>Epoux d'<persName ref="#Anastasie_de_Restaud">Anastasie de
+               Restaud</persName>. Le blason de comte de Restaud est plus ancien que celui
+               du baron de Nucingen.</note>
+         </person>
+         <person xml:id="Delphine_de_Nucingen">
+            <persName>Delphine de Nucingen</persName>
+            <note>Fille cadette du <persName ref="#Jean-Joachim_Goriot">père
+               Goriot</persName>, épouse du baron de Nucingen.</note>
+         </person>
+         <person xml:id="Baron_de_Nucingen"><persName>Baron de Nucingen</persName><note>Célèbre banquier de la comédie humaine, mari de Delphine de Nucigen</note></person>
+         <person xml:id="Henri_de_Marsay">
+            <persName>Henri de Marsay</persName>
+            <note>Amant de <persName ref="#Delphine_de_Nucingen">Delphine de
+               Nucingen</persName>.</note>
+         </person>
+      </listPerson>
+      <listRelation type="marital">
+         <relation name="epouse" active="#Anastasie_de_Restaud" passive="#comte_de_Restaud"/>
+         <relation name="epouse" active="#Delphine_de_Nucingen" passive="#Baron_de_Nucingen"/>
+      </listRelation>
+      <listRelation type="famille">
+         <relation name="parent" active="#Jean-Joachim_Goriot" passive="#Delphine_de_Nucingen #Anastasie_de_Restaud"/>
+      </listRelation>
+      <listRelation type="adultere">
+         <relation name="amante" active="#Delphine_de_Nucingen" passive="#Henri_de_Marsay #Eugène_de_Rastignac"/>
+      </listRelation>
+   </standOff>
+</TEI>
+  
+   
