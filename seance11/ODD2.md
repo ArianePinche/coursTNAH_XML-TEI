@@ -16,7 +16,7 @@ Pour personnaliser son schéma, il existe 4 manipulations principales :
 
 1- Suppression simple d'un élément avec @mode="delete"
 	- `<elementSpec ident="head" mode="delete"/>`
-2- Suppression d'un élément ou une classe dans un module avec  @exclude
+2- Suppression d'un élément ou une classe dans un module avec  @except
 	- `<moduleRef key="core" except="head"/>`
 3- Non insertion dans un module ou une classe avec @include
 	- `<moduleRef key="core" include="p author title l lg"/>`
