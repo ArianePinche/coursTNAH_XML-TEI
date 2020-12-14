@@ -19,7 +19,7 @@ Pour personnaliser son schéma, il existe 4 manipulations principales :
 2- Suppression d'un élément ou une classe dans un module avec  @exclude
 	- `<moduleRef key="core" except="head"/>`
 3- Non insertion dans un module ou une classe avec @include
-	- `<moduleRef key="core" include="p head author title l lg"/>`
+	- `<moduleRef key="core" include="p author title l lg"/>`
 
 ---
 
@@ -75,7 +75,9 @@ Liste des types de données TEI :<https://www.tei-c.org/release/doc/tei-p5-doc/f
 - Création d'un nouvel élément qui n'appartient pas au domaine TEI :
 
 ```xml
-<elementSpec ident="alexandrin" mode="add" ns="http://www.example.com/ns/nonTEI">
+<elementSpec ident="alexandrin" 
+             mode="add" 
+             ns="http://www.example.org/ns/nonTEI">
     <classes>
        <memberOf key="model.lLike"/>
        <memberOf key="macro.paraContent"/>
@@ -97,7 +99,7 @@ Liste des types de données TEI :<https://www.tei-c.org/release/doc/tei-p5-doc/f
  - Modifier les valeurs de l'attribut type des `<rdg>` en faisant une liste fermée comprenant les valeurs :
 	- graphic
 	- semantic
-- Limiter n'autoriser que les nombres entiers dans les valeurs de l'attribut @n de l'élément l
+- N'autoriser que les nombres entiers dans les valeurs de l'attribut @n de l'élément l
 
 ---
 ## Documenter son ODD
